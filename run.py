@@ -1,3 +1,5 @@
+import time
+
 def introduction_func():
     """
     Displays a welcome message to the user with a description of the game, 
@@ -8,7 +10,7 @@ def introduction_func():
     Intrigued? Then let's get started...\n"""
 
     print(introduction)
-
+    time.sleep(3)
     user = input('Enter your name or nickname\n')
     return user
 
