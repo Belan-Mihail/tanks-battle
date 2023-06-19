@@ -56,6 +56,22 @@ def check_difficulty():
     return level
 
 
+pick_user_level_game = check_difficulty()
+
+
+def game_start(difficulty):
+    """
+    a function that, based on processing the user's choice,
+    launches the game in the appropriate difficulty
+    """
+    if difficulty == 'easy':
+        print('easy')
+    elif difficulty == 'medium':
+        print('medium')
+    else:
+        print('hard')
+
+
 
 
 
