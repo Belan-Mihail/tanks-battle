@@ -72,11 +72,11 @@ def game_start(difficulty):
         print('hard')
 
 
+def main():
+    """
+    the main function that launches the game process
+    """
+    game_start(pick_user_level_game)
 
 
-
-
-
-
-
-
+main()
