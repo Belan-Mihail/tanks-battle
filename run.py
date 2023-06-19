@@ -17,6 +17,7 @@ def introduction_func():
     return user
 
 
+# call introduction_func and write the return value to a variable
 user_name = introduction_func()
 
 
@@ -37,7 +38,25 @@ def game_difficulty_selection():
     return choice
 
 
+# call game_difficulty_selection and write the return value to a variable
 user_choice = game_difficulty_selection()
+
+
+def check_difficulty():
+    """
+    Based on the data entered by the user,
+    the function sets the game difficulty value
+    """
+    if int(user_choice) == 1:
+        level = 'easy'
+    elif int(user_choice) == 2:
+        level = 'medium'
+    else:
+        level = 'hard'
+    return level
+
+
+
 
 
 
