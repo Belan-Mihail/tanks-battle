@@ -60,13 +60,68 @@ def check_difficulty():
 pick_user_level_game = check_difficulty()
 
 
+def easy_game_level():
+    """
+    a function that displays the gameplay with easy difficulty
+    """
+    def user_tanks_choice():
+        while True:
+            time.sleep(1)
+            print("Enter two arbitrary numbers from 1 to 10 separated by a comma")
+            time.sleep(1)
+            print("These will be your tanks")
+            time.sleep(1)
+            print("Example: 3,7\n")
+
+            user_tanks = input("Enter your data here:\n")
+
+            time.sleep(1)
+
+            user_tanks = user_tanks.split(",")
+
+            # condition on the validity of the input data
+            if validate_tanks_data(user_tanks):
+                print(f"Yours tanks are {user_tanks[0]} and {user_tanks[1]}\n")
+                break
+
+        return user_tanks
+        
+
+    def validate_tanks_data(values):
+        """
+        checks the data entered by the user for compliance 
+        with the required ones and "catches" errors
+        """
+        try:
+            [int(value) for value in values]
+            if len(values) != 2:
+                raise ValueError(
+                    f"Exactly 2 values required, you provided {len(values)}"
+                )
+            if (int(values[0]) > 10 or int(values[0]) <= 0) or (int(values[1]) > 10 or int(values[1]) <= 0):
+                raise ValueError(
+                    f'The entered numbers must not be more than 10 and less than 1'
+                ) 
+            if values[0] == values[1]:
+                raise ValueError(
+                    f"Numbers entered must not be the same"
+                )
+        except ValueError as e:
+            print(f"Invalid data: {e}, please try again.\n")
+            return False
+
+        return True
+        
+    user_tanks_choice = user_tanks_choice() #user tanks
+
+
 def game_start(difficulty):
     """
     a function that, based on processing the user's choice,
     launches the game in the appropriate difficulty
     """
     if difficulty == 'easy':
-        print('easy')
+        easy_game_level()
     elif difficulty == 'medium':
         print('medium')
     else:
