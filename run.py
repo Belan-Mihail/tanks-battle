@@ -56,6 +56,7 @@ def check_difficulty():
     return level
 
 
+# call check_difficulty and write the return value to a variable
 pick_user_level_game = check_difficulty()
 
 
@@ -79,4 +80,5 @@ def main():
     game_start(pick_user_level_game)
 
 
+# call main to start the game
 main()
