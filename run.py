@@ -146,7 +146,7 @@ def easy_game_level():
 
     def first_move_choice():
         """
-        The function randomly selects one of two values 
+        The function randomly selects one of two values
         that determines who will go first
         """
         time.sleep(2)
@@ -166,6 +166,41 @@ def easy_game_level():
 
     # first_move_choice
     first_move = first_move_choice()
+
+
+    def game_cycle(moveChoice): 
+        """
+        A function that deduces the rules of the game and
+        triggers the life cycle of the game based on who goes first.
+        """
+        time.sleep(2)
+        print('Just a second... I will briefly talk about the rules of the game and begin\n')
+        time.sleep(2)
+        print('The player and the computer take turns shooting at enemy tanks')
+        time.sleep(2)
+        print(f'Enter a new number each time between 1 and {len(computer_possible_tanks_list)}')
+        time.sleep(2)
+        print('If there is an enemy tank in the number entered by the user or selected by the computer, it is hit')
+        time.sleep(2)
+        print('The winner is the one who quickly knocks out all the enemy tanks\n')
+        time.sleep(2)
+        print('And now let\'s start...\n')
+        time.sleep(2)
+        print(f'Goes first {moveChoice}')
+
+        if moveChoice == 'user':
+            print('User goes first')
+        else:
+            print('Computer goes first')
+    
+
+    game_cycle(first_move)
+
+
+
+
+
+
 
 
 def game_start(difficulty):
