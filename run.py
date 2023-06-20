@@ -1,4 +1,5 @@
 import time
+import random
 
 
 def introduction_func():
@@ -67,7 +68,7 @@ def easy_game_level():
     def user_tanks_choice():
         while True:
             time.sleep(1)
-            print("Enter two arbitrary numbers from 1 to 10 separated by a comma")
+            print("Enter two numbers from 1 to 10 separated by a comma")
             time.sleep(1)
             print("These will be your tanks")
             time.sleep(1)
@@ -85,11 +86,11 @@ def easy_game_level():
                 break
 
         return user_tanks
-        
+
 
     def validate_tanks_data(values):
         """
-        checks the data entered by the user for compliance 
+        checks the data entered by the user for compliance
         with the required ones and "catches" errors
         """
         try:
@@ -101,7 +102,7 @@ def easy_game_level():
             if (int(values[0]) > 10 or int(values[0]) <= 0) or (int(values[1]) > 10 or int(values[1]) <= 0):
                 raise ValueError(
                     f'The entered numbers must not be more than 10 and less than 1'
-                ) 
+                )
             if values[0] == values[1]:
                 raise ValueError(
                     f"Numbers entered must not be the same"
@@ -111,8 +112,9 @@ def easy_game_level():
             return False
 
         return True
-        
-    user_tanks_choice = user_tanks_choice() #user tanks
+
+    # user tanks
+    user_tanks_choice = user_tanks_choice()
 
 
 def game_start(difficulty):
