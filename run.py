@@ -144,6 +144,30 @@ def easy_game_level():
     # time.sleep(2)
 
 
+    def first_move_choice():
+        """
+        The function randomly selects one of two values 
+        that determines who will go first
+        """
+        time.sleep(2)
+        print("Now let's decide who will go first.")
+        time.sleep(2)
+        print('Flipping a coin... ')
+        time.sleep(2)
+        print('And...\n')
+        time.sleep(2)
+        if random.randint(0, 1) == 0:
+            print('You are lucky! You go first\n')
+            return 'user'
+        else:
+            print('You are unlucky...:( The computer goes first\n')
+            return 'computer'
+    
+
+    # first_move_choice
+    first_move = first_move_choice()
+
+
 def game_start(difficulty):
     """
     a function that, based on processing the user's choice,
