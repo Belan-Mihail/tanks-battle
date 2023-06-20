@@ -116,6 +116,12 @@ def easy_game_level():
     # user tanks
     user_tanks_choice = user_tanks_choice()
 
+    # computer possible tanks list
+    computer_possible_tanks_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+
+    # computer tanks
+    computer_tanks = []
+
 
     def computer_tanks_choice(list):
         """
@@ -131,6 +137,11 @@ def easy_game_level():
         print('The computer has made its choice\n')
         
         return computer_tanks
+    
+    computer_tanks.append(str(computer_tanks_choice(computer_possible_tanks_list)))
+    # print(computer_tanks)
+    # print(type(computer_tanks[0]))
+    # time.sleep(2)
 
 
 def game_start(difficulty):
