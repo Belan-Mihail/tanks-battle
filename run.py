@@ -87,7 +87,6 @@ def easy_game_level():
 
         return user_tanks
 
-
     def validate_tanks_data(values):
         """
         checks the data entered by the user for compliance
@@ -101,11 +100,11 @@ def easy_game_level():
                 )
             if (int(values[0]) > 10 or int(values[0]) <= 0) or (int(values[1]) > 10 or int(values[1]) <= 0):
                 raise ValueError(
-                    f'The entered numbers must not be more than 10 and less than 1'
+                    'The entered numbers must not be more than 10 and less than 1'
                 )
             if values[0] == values[1]:
                 raise ValueError(
-                    f"Numbers entered must not be the same"
+                    "Numbers entered must not be the same"
                 )
         except ValueError as e:
             print(f"Invalid data: {e}, please try again.\n")
@@ -122,7 +121,6 @@ def easy_game_level():
     # computer tanks
     computer_tanks = []
 
-
     def computer_tanks_choice(list):
         """
         A function that determines the computer's tanks
@@ -135,14 +133,13 @@ def easy_game_level():
         time.sleep(2)
         computer_tanks = random.randint(1, len(list) - 1)
         print('The computer has made its choice\n')
-        
+
         return computer_tanks
-    
+
     computer_tanks.append(str(computer_tanks_choice(computer_possible_tanks_list)))
     # print(computer_tanks)
     # print(type(computer_tanks[0]))
     # time.sleep(2)
-
 
     def first_move_choice():
         """
@@ -162,13 +159,11 @@ def easy_game_level():
         else:
             print('You are unlucky...:( The computer goes first\n')
             return 'computer'
-    
 
     # first_move_choice
     first_move = first_move_choice()
 
-
-    def game_cycle(moveChoice): 
+    def game_cycle(moveChoice):
         """
         A function that deduces the rules of the game and
         triggers the life cycle of the game based on who goes first.
@@ -192,15 +187,8 @@ def easy_game_level():
             print('User goes first')
         else:
             print('Computer goes first')
-    
 
     game_cycle(first_move)
-
-
-
-
-
-
 
 
 def game_start(difficulty):
