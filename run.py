@@ -117,6 +117,22 @@ def easy_game_level():
     user_tanks_choice = user_tanks_choice()
 
 
+    def computer_tanks_choice(list):
+        """
+        A function that determines the computer's tanks
+        by choosing a random number from a given list
+        """
+        time.sleep(2)
+        print('And now the computer makes its choice... wait a second')
+        time.sleep(2)
+        print('The computer has only 1 tank')
+        time.sleep(2)
+        computer_tanks = random.randint(1, len(list) - 1)
+        print('The computer has made its choice\n')
+        
+        return computer_tanks
+
+
 def game_start(difficulty):
     """
     a function that, based on processing the user's choice,
