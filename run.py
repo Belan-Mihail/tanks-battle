@@ -149,6 +149,27 @@ def easy_game_level():
     # user_possible_moves
     user_possible_moves = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+    def user_move(maded_moves, possible_moves):
+        """The function describes the process of firing a shot, validates the data entered by the user, adds the user's move to the variable and removes the values entered by the user from the possible moves"""
+        print()
+        print('User turn')
+        print(f'Your attempts: {maded_moves}')
+        print(f'Possible moves: {possible_moves}')
+        print(f'Your tanks: {user_tanks_choice}')
+        print('Where do you order to shoot sir/ma\'am?')
+        while True:
+            user_shot = input('Enter a number from 1 to 10\n')
+            print()
+            
+            if validate_user_shot(user_shot):
+                print('Fire!\n')
+                maded_moves.append(user_shot)
+                possible_moves.remove(int(user_shot))
+                time.sleep(2)
+                print(maded_moves)
+                print(possible_moves)
+                break
+
     def first_move_choice():
         """
         The function randomly selects one of two values
