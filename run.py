@@ -294,6 +294,7 @@ def easy_game_level():
         A function that deduces the rules of the game and
         triggers the life cycle of the game based on who goes first.
         """
+        game = True
         time.sleep(2)
         print('Just a second... I will briefly talk about the rules of the game and begin\n')
         time.sleep(2)
@@ -309,88 +310,34 @@ def easy_game_level():
         time.sleep(2)
 
         if moveChoice == 'user':
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
+            while game:
+                user_move(user_maded_moves, user_possible_moves)
+                check_user_hit_the_target(user_maded_moves, computer_tanks)
+                if len(computer_tanks) == 0:
+                    print('Fantastic! You won!!!!')
+                    game = False
+                    break
+                computer_move(shuffle_computer_move)
+                check_computer_hit_the_target(computer_moves, user_tanks_choice)
+                if len(user_tanks_choice) == 0:
+                    print('Alas .. This time you lost ...')
+                    game = False
+                    break
         else:
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-            computer_move(shuffle_computer_move)
-            check_computer_hit_the_target(computer_moves, user_tanks_choice)
-            user_move(user_maded_moves, user_possible_moves)
-            check_user_hit_the_target(user_maded_moves, computer_tanks)
-
+            while game:
+                computer_move(shuffle_computer_move)
+                check_computer_hit_the_target(computer_moves, user_tanks_choice)
+                if len(user_tanks_choice) == 0:
+                    print('Alas .. This time you lost ...')
+                    game = False
+                    break
+                user_move(user_maded_moves, user_possible_moves)
+                check_user_hit_the_target(user_maded_moves, computer_tanks)
+                if len(computer_tanks) == 0:
+                    print('Fantastic! You won!!!!')
+                    game = False
+                    break
+            
     game_cycle(first_move)
 
 
