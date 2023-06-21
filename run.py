@@ -43,7 +43,7 @@ def game_difficulty_selection():
 user_choice = game_difficulty_selection()
 
 
-def check_difficulty():
+def check_difficulty(user_choice):
     """
     Based on the data entered by the user,
     the function sets the game difficulty value
@@ -58,7 +58,7 @@ def check_difficulty():
 
 
 # call check_difficulty and write the return value to a variable
-pick_user_level_game = check_difficulty()
+pick_user_level_game = check_difficulty(user_choice)
 
 
 def easy_game_level():
@@ -261,25 +261,6 @@ def easy_game_level():
             print(list)
             time.sleep(2)
 
-    def repeat_game():
-        """
-        A function that asks the user if he wants to play again
-        """
-        print("Do you want to play more? yes = 1; no = 2\n")
-        will_repeat = input()
-
-        while will_repeat != '1' and will_repeat != '2':
-            print('Incorrect data entered. Do you want to play more? yes = 1; no = 2\n')
-            will_repeat = input()
-
-        if will_repeat == "1":
-            time.sleep(2)
-            print()
-            game_difficulty_selection()
-            main()
-        else:
-            return
-
 
     def first_move_choice():
         """
@@ -354,9 +335,10 @@ def easy_game_level():
         print()
         print('Game Over')
         time.sleep(2)
-        repeat_game()
 
     game_cycle(first_move)
+    # return new_game
+
 
 
 def medium_game_level():
@@ -524,6 +506,7 @@ def medium_game_level():
             if value in computer_moves:
                 continue
             else:
+                print(value)
                 computer_moves.append(str(value))
                 time.sleep(2)
                 break
@@ -566,26 +549,6 @@ def medium_game_level():
             print('Ha-ha! Computer missed\n')
             print(list)
             time.sleep(2)
-
-    def repeat_game():
-        """
-        A function that asks the user if he wants to play again
-        """
-        print("Do you want to play more? yes = 1; no = 2\n")
-        will_repeat = input()
-
-        while will_repeat != '1' and will_repeat != '2':
-            print('Incorrect data entered. Do you want to play more? yes = 1; no = 2\n')
-            will_repeat = input()
-
-        if will_repeat == "1":
-            time.sleep(2)
-            print()
-            game_difficulty_selection()
-            main()
-        else:
-            return
-
 
     def first_move_choice():
         """
@@ -660,7 +623,7 @@ def medium_game_level():
         print()
         print('Game Over')
         time.sleep(2)
-        repeat_game()
+
 
     game_cycle(first_move)
 
@@ -678,12 +641,37 @@ def game_start(difficulty):
         print('hard')
 
 
-def main():
+def repeat_game():
+        """
+        A function that asks the user if he wants to play again
+        """
+        print("Do you want to play more? yes = 1; no = 2\n")
+        will_repeat = input()
+
+        while will_repeat != '1' and will_repeat != '2':
+            print('Incorrect data entered. Do you want to play more? yes = 1; no = 2\n')
+            will_repeat = input()
+
+        if will_repeat == "1":
+            user_choice = game_difficulty_selection()
+            pick_user_level_game = check_difficulty(user_choice)
+            main(pick_user_level_game)
+        else:
+            return
+
+
+def main(pick_user_level_game):
     """
     the main function that launches the game process
     """
     game_start(pick_user_level_game)
+    repeat_game()
+    
+    
+    
 
 
 # call main to start the game
-main()
+main(pick_user_level_game)
+
+
