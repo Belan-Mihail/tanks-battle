@@ -214,7 +214,7 @@ def easy_game_level():
         """
         print()
         time.sleep(1)
-        print('And now the computer is walking')
+        print('And now the computer is going')
         time.sleep(2)
         print('He shoots straight...')
         
@@ -228,9 +228,26 @@ def easy_game_level():
                 time.sleep(2)
                 break
 
-    
     # computer shuffle move
     shuffle_computer_move = shuffle_computer_move(computer_possible_tanks_list)
+
+    def check_user_hit_the_target(shot, list):
+        """
+        a function that checks if the user is in the tank
+        """
+        print('Checking if you hit the tank\n')
+        time.sleep(2)
+        index = len(shot) - 1
+        if shot[index] in list:
+            print('Exactly! You knocked out an enemy tank\n')
+            list.remove(shot[index])
+            time.sleep(2)
+            print(list)
+            time.sleep(2)
+        else:
+            print('Miss ): Maybe you should aim better next time?\n')
+            print(list)
+            time.sleep(2) 
 
     def first_move_choice():
         """
@@ -272,18 +289,21 @@ def easy_game_level():
         time.sleep(2)
         print('And now let\'s start...\n')
         time.sleep(2)
-        print(f'Goes first {moveChoice}')
 
         if moveChoice == 'user':
             user_move(user_maded_moves, user_possible_moves)
+            check_user_hit_the_target(user_maded_moves, computer_tanks)
             computer_move(shuffle_computer_move)
             user_move(user_maded_moves, user_possible_moves)
+            check_user_hit_the_target(user_maded_moves, computer_tanks)
             computer_move(shuffle_computer_move)
         else:
             computer_move(shuffle_computer_move)
             user_move(user_maded_moves, user_possible_moves)
+            check_user_hit_the_target(user_maded_moves, computer_tanks)
             computer_move(shuffle_computer_move)
             user_move(user_maded_moves, user_possible_moves)
+            check_user_hit_the_target(user_maded_moves, computer_tanks)
 
     game_cycle(first_move)
 
