@@ -214,9 +214,9 @@ def easy_game_level():
         """
         print()
         time.sleep(1)
-        print('А теперь ходит компьютер')
+        print('And now the computer is walking')
         time.sleep(2)
-        print('Он стреляет в точку...')
+        print('He shoots straight...')
         
         for value in list:
             if value in computer_moves:
