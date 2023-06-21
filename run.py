@@ -214,7 +214,7 @@ def easy_game_level():
         """
         print()
         time.sleep(1)
-        print('And now the computer is going')
+        print('Computer turn')
         time.sleep(2)
         print('He shoots straight...')
         
@@ -297,15 +297,15 @@ def easy_game_level():
         game = True
         time.sleep(2)
         print('Just a second... I will briefly talk about the rules of the game and begin\n')
-        time.sleep(2)
+        time.sleep(3)
         print('The player and the computer take turns shooting at enemy tanks')
-        time.sleep(2)
+        time.sleep(3)
         print(f'Enter a new number each time between 1 and {len(computer_possible_tanks_list)}')
-        time.sleep(2)
+        time.sleep(3)
         print('If there is an enemy tank in the number entered by the user or selected by the computer, it is hit')
-        time.sleep(2)
+        time.sleep(3)
         print('The winner is the one who quickly knocks out all the enemy tanks\n')
-        time.sleep(2)
+        time.sleep(3)
         print('And now let\'s start...\n')
         time.sleep(2)
 
