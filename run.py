@@ -193,6 +193,20 @@ def easy_game_level():
             return False
 
         return True
+    
+    def shuffle_computer_move(list):
+        """
+        A function that generates a list of random possible computer moves
+        """
+        random.shuffle(list)
+        shuffle = []
+        for i in list:
+            shuffle.append(i)
+        
+        return shuffle
+    
+    # computer shuffle move
+    shuffle_computer_move = shuffle_computer_move(computer_possible_list)
 
     def first_move_choice():
         """
