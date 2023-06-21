@@ -366,11 +366,11 @@ def medium_game_level():
     def user_tanks_choice():
         while True:
             time.sleep(1)
-            print("Enter two numbers from 1 to 10 separated by a comma")
+            print("Enter three numbers from 1 to 20 separated by a comma")
             time.sleep(1)
             print("These will be your tanks")
             time.sleep(1)
-            print("Example: 3,7\n")
+            print("Example: 3,10,14\n")
 
             user_tanks = input("Enter your data here:\n")
 
@@ -380,7 +380,7 @@ def medium_game_level():
 
             # condition on the validity of the input data
             if validate_tanks_data(user_tanks):
-                print(f"Yours tanks are {user_tanks[0]} and {user_tanks[1]}\n")
+                print(f"Yours tanks are {user_tanks[0]} and {user_tanks[1]} and {user_tanks[2]}\n")
                 break
 
         return user_tanks
@@ -392,15 +392,15 @@ def medium_game_level():
         """
         try:
             [int(value) for value in values]
-            if len(values) != 2:
+            if len(values) != 3:
                 raise ValueError(
-                    f"Exactly 2 values required, you provided {len(values)}"
+                    f"Exactly 3 values required, you provided {len(values)}"
                 )
-            if (int(values[0]) > 10 or int(values[0]) <= 0) or (int(values[1]) > 10 or int(values[1]) <= 0):
+            if (int(values[0]) > 20 or int(values[0]) <= 0) or (int(values[1]) > 20 or int(values[1]) <= 0) or (int(values[2]) > 20 or int(values[2]) <= 0):
                 raise ValueError(
                     'The entered numbers must not be more than 10 and less than 1'
                 )
-            if values[0] == values[1]:
+            if values[0] == values[1] or values[0] == values[2] or values[1] == values[2]:
                 raise ValueError(
                     "Numbers entered must not be the same"
                 )
@@ -414,7 +414,7 @@ def medium_game_level():
     user_tanks_choice = user_tanks_choice()
 
     # computer possible tanks list
-    computer_possible_tanks_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+    computer_possible_tanks_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
 
     # computer tanks
     computer_tanks = []
@@ -427,14 +427,24 @@ def medium_game_level():
         time.sleep(2)
         print('And now the computer makes its choice... wait a second')
         time.sleep(2)
-        print('The computer has only 1 tank')
+        print('The computer has 3 tank')
         time.sleep(2)
-        computer_tanks = random.randint(1, len(list) - 1)
+        computer_tanks_list = []
+        while len(computer_tanks_list) != 3:
+            for i in list:
+                if i in computer_tanks_list:
+                    continue
+                else:
+                    i = random.randint(1, len(list) - 1)
+                    computer_tanks_list.append(str(i))
+                    print(i)
+                    print(computer_tanks_list)
+                    time.sleep(2)
+                    break        
         print('The computer has made its choice\n')
+        return computer_tanks_list
 
-        return computer_tanks
-
-    computer_tanks.append(str(computer_tanks_choice(computer_possible_tanks_list)))
+    computer_tanks = (computer_tanks_choice(computer_possible_tanks_list)).copy()
 
     # user maded moves
     user_maded_moves = []
