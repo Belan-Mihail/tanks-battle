@@ -141,6 +141,14 @@ def easy_game_level():
     # print(type(computer_tanks[0]))
     # time.sleep(2)
 
+    """
+    variables that are needed for the life cycle of the game
+    """
+    # user maded moves
+    user_maded_moves = []
+    # user_possible_moves
+    user_possible_moves = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
     def first_move_choice():
         """
         The function randomly selects one of two values
