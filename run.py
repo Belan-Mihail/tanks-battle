@@ -148,6 +148,8 @@ def easy_game_level():
     user_maded_moves = []
     # user_possible_moves
     user_possible_moves = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    # computer moves
+    computer_moves = []
 
     def user_move(maded_moves, possible_moves):
         """The function describes the process of firing a shot, validates the data entered by the user, adds the user's move to the variable and removes the values entered by the user from the possible moves"""
@@ -205,8 +207,30 @@ def easy_game_level():
         
         return shuffle
     
+    def computer_move(list):
+        """
+        A function that plays a computer shot and
+        writes its shot to the corresponding variable
+        """
+        print()
+        time.sleep(1)
+        print('А теперь ходит компьютер')
+        time.sleep(2)
+        print('Он стреляет в точку...')
+        
+        for value in list:
+            if value in computer_moves:
+                continue
+            else:
+                computer_moves.append(str(value))
+                print(value)
+                print(computer_moves)
+                time.sleep(2)
+                break
+
+    
     # computer shuffle move
-    shuffle_computer_move = shuffle_computer_move(computer_possible_list)
+    shuffle_computer_move = shuffle_computer_move(computer_possible_tanks_list)
 
     def first_move_choice():
         """
@@ -252,8 +276,14 @@ def easy_game_level():
 
         if moveChoice == 'user':
             user_move(user_maded_moves, user_possible_moves)
+            computer_move(shuffle_computer_move)
+            user_move(user_maded_moves, user_possible_moves)
+            computer_move(shuffle_computer_move)
         else:
-            print('Computer goes first')
+            computer_move(shuffle_computer_move)
+            user_move(user_maded_moves, user_possible_moves)
+            computer_move(shuffle_computer_move)
+            user_move(user_maded_moves, user_possible_moves)
 
     game_cycle(first_move)
 
