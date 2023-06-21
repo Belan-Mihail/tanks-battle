@@ -166,9 +166,33 @@ def easy_game_level():
                 maded_moves.append(user_shot)
                 possible_moves.remove(int(user_shot))
                 time.sleep(2)
+                print(user_shot)
                 print(maded_moves)
                 print(possible_moves)
                 break
+    
+    def validate_user_shot(value):
+        """
+        the function validates the data entered by the user and handles possible errors
+        """
+        try:
+            if int(value) > 10:
+                raise ValueError(
+                    "The entered number must not be more than 10"
+                )
+            if  int(value) < 1:
+                raise ValueError(
+                    "The entered number must not be less than 1"
+                )
+            if  value in user_maded_moves:
+                raise ValueError(
+                    "You have already entered this value. Choose another"
+                )
+        except ValueError as e:
+            print(f"Invalid data: {e}, please try again.\n")
+            return False
+
+        return True
 
     def first_move_choice():
         """
@@ -213,7 +237,7 @@ def easy_game_level():
         print(f'Goes first {moveChoice}')
 
         if moveChoice == 'user':
-            print('User goes first')
+            user_move(user_maded_moves, user_possible_moves)
         else:
             print('Computer goes first')
 
