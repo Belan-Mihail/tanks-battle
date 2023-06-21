@@ -635,11 +635,11 @@ def hard_game_level():
     def user_tanks_choice():
         while True:
             time.sleep(1)
-            print("Enter three numbers from 1 to 20 separated by a comma")
+            print("Enter four numbers from 1 to 30 separated by a comma")
             time.sleep(1)
             print("These will be your tanks")
             time.sleep(1)
-            print("Example: 3,10,14\n")
+            print("Example: 3,10,14,25\n")
 
             user_tanks = input("Enter your data here:\n")
 
@@ -649,7 +649,7 @@ def hard_game_level():
 
             # condition on the validity of the input data
             if validate_tanks_data(user_tanks):
-                print(f"Yours tanks are {user_tanks[0]} and {user_tanks[1]} and {user_tanks[2]}\n")
+                print(f"Yours tanks are {user_tanks[0]} and {user_tanks[1]} and {user_tanks[2]} and {user_tanks[3]}\n")
                 break
 
         return user_tanks
@@ -661,15 +661,15 @@ def hard_game_level():
         """
         try:
             [int(value) for value in values]
-            if len(values) != 3:
+            if len(values) != 4:
                 raise ValueError(
                     f"Exactly 3 values required, you provided {len(values)}"
                 )
-            if (int(values[0]) > 20 or int(values[0]) <= 0) or (int(values[1]) > 20 or int(values[1]) <= 0) or (int(values[2]) > 20 or int(values[2]) <= 0):
+            if (int(values[0]) > 30 or int(values[0]) <= 0) or (int(values[1]) > 30 or int(values[1]) <= 0) or (int(values[2]) > 30 or int(values[2]) <= 0) or (int(values[3]) > 30 or int(values[3]) <= 0):
                 raise ValueError(
                     'The entered numbers must not be more than 10 and less than 1'
                 )
-            if values[0] == values[1] or values[0] == values[2] or values[1] == values[2]:
+            if values[0] == values[1] or values[0] == values[2] or values[0] == values[3] or values[1] == values[2] or values[1] == values[3] or values[2] == values[3]:
                 raise ValueError(
                     "Numbers entered must not be the same"
                 )
@@ -683,7 +683,7 @@ def hard_game_level():
     user_tanks_choice = user_tanks_choice()
 
     # computer possible tanks list
-    computer_possible_tanks_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
+    computer_possible_tanks_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30']
 
     # computer tanks
     computer_tanks = []
@@ -696,10 +696,10 @@ def hard_game_level():
         time.sleep(2)
         print('And now the computer makes its choice... wait a second')
         time.sleep(2)
-        print('The computer has 3 tank')
+        print('The computer has 5 tank')
         time.sleep(2)
         computer_tanks_list = []
-        while len(computer_tanks_list) != 3:
+        while len(computer_tanks_list) != 5:
             for i in list:
                 if i in computer_tanks_list:
                     continue
@@ -718,7 +718,7 @@ def hard_game_level():
     # user maded moves
     user_maded_moves = []
     # user_possible_moves
-    user_possible_moves = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    user_possible_moves = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
     # computer moves
     computer_moves = []
 
@@ -731,7 +731,7 @@ def hard_game_level():
         print(f'Your tanks: {user_tanks_choice}')
         print('Where do you order to shoot sir/ma\'am?')
         while True:
-            user_shot = input('Enter a number from 1 to 20\n')
+            user_shot = input('Enter a number from 1 to 30\n')
             print()
 
             if validate_user_shot(user_shot):
@@ -749,9 +749,9 @@ def hard_game_level():
         the function validates the data entered by the user and handles possible errors
         """
         try:
-            if int(value) > 20:
+            if int(value) > 30:
                 raise ValueError(
-                    "The entered number must not be more than 20"
+                    "The entered number must not be more than 30"
                 )
             if int(value) < 1:
                 raise ValueError(
