@@ -266,6 +266,38 @@ def easy_game_level():
             print('Ha-ha! Computer missed\n')
             print(list)
             time.sleep(2)
+    
+    def repeat_game():
+        """
+        A function that asks the user if he wants to play again
+        """
+        print("Do you want to play more? yes = 1; no = 2\n")
+        will_repeat = input()
+
+        while will_repeat != '1' and will_repeat != '2':
+            print('Incorrect data entered. Do you want to play more? yes = 1; no = 2\n')
+            will_repeat = input()
+
+        if will_repeat == "1":
+            game_difficulty_selection()
+            main()
+        else:
+            return
+    
+        # repeat_choice = True
+        # while repeat_choice:
+        #     print(will_re)
+        #     if will_repeat == "1":
+        #         repeat_choice = False
+        #         game_difficulty_selection()
+        #         main()
+        #         break
+        #     elif will_repeat == "2":
+        #         repeat_choice = False
+        #         return
+        #     else:
+        #         print("Do you want to play more? yes = 1; no = 2\n")
+        #         will_repaet = input()
 
     def first_move_choice():
         """
@@ -337,6 +369,9 @@ def easy_game_level():
                     print('Fantastic! You won!!!!')
                     game = False
                     break
+        print('Game Over')
+        time.sleep(2)
+        repeat_game()
             
     game_cycle(first_move)
 
