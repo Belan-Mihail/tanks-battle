@@ -449,7 +449,7 @@ def medium_game_level():
     # user maded moves
     user_maded_moves = []
     # user_possible_moves
-    user_possible_moves = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    user_possible_moves = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     # computer moves
     computer_moves = []
 
@@ -462,7 +462,7 @@ def medium_game_level():
         print(f'Your tanks: {user_tanks_choice}')
         print('Where do you order to shoot sir/ma\'am?')
         while True:
-            user_shot = input('Enter a number from 1 to 10\n')
+            user_shot = input('Enter a number from 1 to 20\n')
             print()
 
             if validate_user_shot(user_shot):
@@ -480,9 +480,9 @@ def medium_game_level():
         the function validates the data entered by the user and handles possible errors
         """
         try:
-            if int(value) > 10:
+            if int(value) > 20:
                 raise ValueError(
-                    "The entered number must not be more than 10"
+                    "The entered number must not be more than 20"
                 )
             if int(value) < 1:
                 raise ValueError(
@@ -525,8 +525,6 @@ def medium_game_level():
                 continue
             else:
                 computer_moves.append(str(value))
-                print(value)
-                print(computer_moves)
                 time.sleep(2)
                 break
 
