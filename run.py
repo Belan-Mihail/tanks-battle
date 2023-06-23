@@ -448,24 +448,32 @@ def medium_game_level():
                 else:
                     i = random.randint(1, len(list) - 1)
                     computer_tanks_list.append(str(i))
-                    print(i)
-                    print(computer_tanks_list)
-                    time.sleep(2)
+                    # print(i)
+                    # print(computer_tanks_list)
+                    time.sleep(1)
                     break
         print('The computer has made its choice\n')
         return computer_tanks_list
 
-    computer_tanks = (computer_tanks_choice(computer_possible_tanks_list)).copy()
+    computer_tanks = (
+        computer_tanks_choice(computer_possible_tanks_list)
+        ).copy()
 
     # user maded moves
     user_maded_moves = []
     # user_possible_moves
-    user_possible_moves = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    user_possible_moves = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+        12, 13, 14, 15, 16, 17, 18, 19, 20
+        ]
     # computer moves
     computer_moves = []
 
     def user_move(maded_moves, possible_moves):
-        """The function describes the process of firing a shot, validates the data entered by the user, adds the user's move to the variable and removes the values entered by the user from the possible moves"""
+        """The function describes the process of firing a shot,
+        validates the data entered by the user,
+        adds the user's move to the variable
+        and removes the values entered by the user from the possible moves"""
         print()
         print('User turn')
         print(f'Your attempts: {maded_moves}')
@@ -481,14 +489,15 @@ def medium_game_level():
                 maded_moves.append(user_shot)
                 possible_moves.remove(int(user_shot))
                 time.sleep(2)
-                print(user_shot)
-                print(maded_moves)
-                print(possible_moves)
+                # print(user_shot)
+                # print(maded_moves)
+                # print(possible_moves)
                 break
 
     def validate_user_shot(value):
         """
-        the function validates the data entered by the user and handles possible errors
+        the function validates the data entered by the user
+        and handles possible errors
         """
         try:
             if int(value) > 20:
@@ -554,11 +563,11 @@ def medium_game_level():
             print('Exactly! You knocked out an enemy tank\n')
             list.remove(shot[index])
             time.sleep(2)
-            print(list)
+            # print(list)
             time.sleep(2)
         else:
             print('Miss ): Maybe you should aim better next time?\n')
-            print(list)
+            # print(list)
             time.sleep(2)
 
     def check_computer_hit_the_target(shot, list):
@@ -572,11 +581,11 @@ def medium_game_level():
             print('Damn! He knocked out your tank\n')
             list.remove(shot[index])
             time.sleep(2)
-            print(list)
+            # print(list)
             time.sleep(2)
         else:
             print('Ha-ha! Computer missed\n')
-            print(list)
+            # print(list)
             time.sleep(2)
 
     def first_move_choice():
@@ -608,15 +617,20 @@ def medium_game_level():
         """
         game = True
         time.sleep(2)
-        print('Just a second... I will briefly talk about the rules of the game and begin\n')
+        print("""Just a second...
+        I will briefly talk about the rules of the game and begin\n""")
         time.sleep(3)
         print('The player and the computer take turns shooting at enemy tanks')
         time.sleep(3)
-        print(f'Enter a new number each time between 1 and {len(computer_possible_tanks_list)}')
+        print(f"""Enter a new number each time between
+        1 and {len(computer_possible_tanks_list)}""")
         time.sleep(3)
-        print('If there is an enemy tank in the number entered by the user or selected by the computer, it is hit')
+        print("""If there is an enemy tank in the number
+        entered by the user or selected by the computer,
+        it is hit""")
         time.sleep(3)
-        print('The winner is the one who quickly knocks out all the enemy tanks\n')
+        print("""The winner is the one who quickly knocks
+        out all the enemy tanks\n""")
         time.sleep(3)
         print('And now let\'s start...\n')
         time.sleep(2)
@@ -630,7 +644,9 @@ def medium_game_level():
                     game = False
                     break
                 computer_move(shuffle_computer_move)
-                check_computer_hit_the_target(computer_moves, user_tanks_choice)
+                check_computer_hit_the_target(
+                    computer_moves, user_tanks_choice
+                    )
                 if len(user_tanks_choice) == 0:
                     print('Alas .. This time you lost ...')
                     game = False
@@ -638,7 +654,9 @@ def medium_game_level():
         else:
             while game:
                 computer_move(shuffle_computer_move)
-                check_computer_hit_the_target(computer_moves, user_tanks_choice)
+                check_computer_hit_the_target(
+                    computer_moves, user_tanks_choice
+                    )
                 if len(user_tanks_choice) == 0:
                     print('Alas .. This time you lost ...')
                     game = False
