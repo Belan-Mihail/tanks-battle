@@ -695,7 +695,11 @@ def hard_game_level():
 
             # condition on the validity of the input data
             if validate_tanks_data(user_tanks):
-                print(f"Yours tanks are {user_tanks[0]} and {user_tanks[1]} and {user_tanks[2]} and {user_tanks[3]}\n")
+                print(f"""Yours tanks are:
+                {user_tanks[0]}
+                {user_tanks[1]}
+                {user_tanks[2]}
+                {user_tanks[3]}\n""")
                 break
 
         return user_tanks
@@ -711,11 +715,25 @@ def hard_game_level():
                 raise ValueError(
                     f"Exactly 3 values required, you provided {len(values)}"
                 )
-            if (int(values[0]) > 30 or int(values[0]) <= 0) or (int(values[1]) > 30 or int(values[1]) <= 0) or (int(values[2]) > 30 or int(values[2]) <= 0) or (int(values[3]) > 30 or int(values[3]) <= 0):
-                raise ValueError(
-                    'The entered numbers must not be more than 10 and less than 1'
-                )
-            if values[0] == values[1] or values[0] == values[2] or values[0] == values[3] or values[1] == values[2] or values[1] == values[3] or values[2] == values[3]:
+            if (
+                int(values[0]) > 30 or int(values[0]) <= 0
+                ) or (
+                    int(values[1]) > 30 or int(values[1]) <= 0
+                    ) or (
+                        int(values[2]) > 30 or int(values[2]) <= 0
+                        ) or (
+                            int(values[3]) > 30 or int(values[3]) <= 0
+                            ):
+                raise ValueError("""The entered numbers must not be more
+                than 10 and less than 1""")
+            if (
+                values[0] == values[1] or
+                values[0] == values[2] or
+                values[0] == values[3] or
+                values[1] == values[2] or
+                values[1] == values[3] or
+                values[2] == values[3]
+               ):
                 raise ValueError(
                     "Numbers entered must not be the same"
                 )
@@ -729,7 +747,10 @@ def hard_game_level():
     user_tanks_choice = user_tanks_choice()
 
     # computer possible tanks list
-    computer_possible_tanks_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30']
+    computer_possible_tanks_list = [
+        '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
+        '12', '13', '14', '15', '16', '17', '18', '19', '20', '21',
+        '22', '23', '24', '25', '26', '27', '28', '29', '30']
 
     # computer tanks
     computer_tanks = []
@@ -752,24 +773,32 @@ def hard_game_level():
                 else:
                     i = random.randint(1, len(list) - 1)
                     computer_tanks_list.append(str(i))
-                    print(i)
-                    print(computer_tanks_list)
-                    time.sleep(2)
+                    # print(i)
+                    # print(computer_tanks_list)
+                    time.sleep(1)
                     break
         print('The computer has made its choice\n')
         return computer_tanks_list
 
-    computer_tanks = (computer_tanks_choice(computer_possible_tanks_list)).copy()
+    computer_tanks = (
+        computer_tanks_choice(computer_possible_tanks_list)
+        ).copy()
 
     # user maded moves
     user_maded_moves = []
     # user_possible_moves
-    user_possible_moves = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+    user_possible_moves = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+        ]
     # computer moves
     computer_moves = []
 
     def user_move(maded_moves, possible_moves):
-        """The function describes the process of firing a shot, validates the data entered by the user, adds the user's move to the variable and removes the values entered by the user from the possible moves"""
+        """The function describes the process of firing a shot,
+        validates the data entered by the user,
+        adds the user's move to the variable
+        and removes the values entered by the user from the possible moves"""
         print()
         print('User turn')
         print(f'Your attempts: {maded_moves}')
@@ -785,14 +814,15 @@ def hard_game_level():
                 maded_moves.append(user_shot)
                 possible_moves.remove(int(user_shot))
                 time.sleep(2)
-                print(user_shot)
-                print(maded_moves)
-                print(possible_moves)
+                # print(user_shot)
+                # print(maded_moves)
+                # print(possible_moves)
                 break
 
     def validate_user_shot(value):
         """
-        the function validates the data entered by the user and handles possible errors
+        the function validates the data entered by the user
+        and handles possible errors
         """
         try:
             if int(value) > 30:
@@ -858,11 +888,11 @@ def hard_game_level():
             print('Exactly! You knocked out an enemy tank\n')
             list.remove(shot[index])
             time.sleep(2)
-            print(list)
+            # print(list)
             time.sleep(2)
         else:
             print('Miss ): Maybe you should aim better next time?\n')
-            print(list)
+            # print(list)
             time.sleep(2)
 
     def check_computer_hit_the_target(shot, list):
@@ -876,11 +906,11 @@ def hard_game_level():
             print('Damn! He knocked out your tank\n')
             list.remove(shot[index])
             time.sleep(2)
-            print(list)
+            # print(list)
             time.sleep(2)
         else:
             print('Ha-ha! Computer missed\n')
-            print(list)
+            # print(list)
             time.sleep(2)
 
     def first_move_choice():
@@ -912,15 +942,22 @@ def hard_game_level():
         """
         game = True
         time.sleep(2)
-        print('Just a second... I will briefly talk about the rules of the game and begin\n')
+        print("""Just a second...
+        I will briefly talk about the rules of the game and begin\n""")
         time.sleep(3)
-        print('The player and the computer take turns shooting at enemy tanks')
+        print(
+            'The player and the computer take turns shooting at enemy tanks'
+            )
         time.sleep(3)
-        print(f'Enter a new number each time between 1 and {len(computer_possible_tanks_list)}')
+        print(f"""Enter a new number each time between
+        1 and {len(computer_possible_tanks_list)}""")
         time.sleep(3)
-        print('If there is an enemy tank in the number entered by the user or selected by the computer, it is hit')
+        print("""If there is an enemy tank in the number
+        entered by the user or selected by the computer,
+        it is hit""")
         time.sleep(3)
-        print('The winner is the one who quickly knocks out all the enemy tanks\n')
+        print("""The winner is the one who quickly knocks out
+        all the enemy tanks\n""")
         time.sleep(3)
         print('And now let\'s start...\n')
         time.sleep(2)
@@ -934,7 +971,9 @@ def hard_game_level():
                     game = False
                     break
                 computer_move(shuffle_computer_move)
-                check_computer_hit_the_target(computer_moves, user_tanks_choice)
+                check_computer_hit_the_target(
+                    computer_moves, user_tanks_choice
+                    )
                 if len(user_tanks_choice) == 0:
                     print('Alas .. This time you lost ...')
                     game = False
@@ -942,7 +981,9 @@ def hard_game_level():
         else:
             while game:
                 computer_move(shuffle_computer_move)
-                check_computer_hit_the_target(computer_moves, user_tanks_choice)
+                check_computer_hit_the_target(
+                    computer_moves, user_tanks_choice
+                    )
                 if len(user_tanks_choice) == 0:
                     print('Alas .. This time you lost ...')
                     game = False
@@ -981,7 +1022,8 @@ def repeat_game():
     will_repeat = input()
 
     while will_repeat != '1' and will_repeat != '2':
-        print('Incorrect data entered. Do you want to play more? yes = 1; no = 2\n')
+        print("""Incorrect data entered. Do you want to play more?
+        yes = 1; no = 2\n""")
         will_repeat = input()
 
     if will_repeat == "1":
