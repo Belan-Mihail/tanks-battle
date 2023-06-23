@@ -171,9 +171,6 @@ def easy_game_level():
                 maded_moves.append(user_shot)
                 possible_moves.remove(int(user_shot))
                 time.sleep(2)
-                # print(user_shot)
-                # print(maded_moves)
-                # print(possible_moves)
                 break
 
     def validate_user_shot(value):
@@ -228,7 +225,6 @@ def easy_game_level():
             else:
                 computer_moves.append(str(value))
                 print(value)
-                # print(computer_moves)
                 time.sleep(2)
                 break
 
@@ -246,11 +242,8 @@ def easy_game_level():
             print('Exactly! You knocked out an enemy tank\n')
             list.remove(shot[index])
             time.sleep(2)
-            # print(list)
-            time.sleep(2)
         else:
             print('Miss ): Maybe you should aim better next time?\n')
-            # print(list)
             time.sleep(2)
 
     def check_computer_hit_the_target(shot, list):
@@ -264,11 +257,8 @@ def easy_game_level():
             print('Damn! He knocked out your tank\n')
             list.remove(shot[index])
             time.sleep(2)
-            # print(list)
-            time.sleep(2)
         else:
             print('Ha-ha! Computer missed\n')
-            # print(list)
             time.sleep(2)
 
     def first_move_choice():
@@ -448,8 +438,6 @@ def medium_game_level():
                 else:
                     i = random.randint(1, len(list) - 1)
                     computer_tanks_list.append(str(i))
-                    # print(i)
-                    # print(computer_tanks_list)
                     time.sleep(1)
                     break
         print('The computer has made its choice\n')
@@ -489,9 +477,6 @@ def medium_game_level():
                 maded_moves.append(user_shot)
                 possible_moves.remove(int(user_shot))
                 time.sleep(2)
-                # print(user_shot)
-                # print(maded_moves)
-                # print(possible_moves)
                 break
 
     def validate_user_shot(value):
@@ -546,7 +531,7 @@ def medium_game_level():
             else:
                 print(value)
                 computer_moves.append(str(value))
-                time.sleep(2)
+                time.sleep(1)
                 break
 
     # computer shuffle move
@@ -563,11 +548,8 @@ def medium_game_level():
             print('Exactly! You knocked out an enemy tank\n')
             list.remove(shot[index])
             time.sleep(2)
-            # print(list)
-            time.sleep(2)
         else:
             print('Miss ): Maybe you should aim better next time?\n')
-            # print(list)
             time.sleep(2)
 
     def check_computer_hit_the_target(shot, list):
@@ -581,11 +563,8 @@ def medium_game_level():
             print('Damn! He knocked out your tank\n')
             list.remove(shot[index])
             time.sleep(2)
-            # print(list)
-            time.sleep(2)
         else:
             print('Ha-ha! Computer missed\n')
-            # print(list)
             time.sleep(2)
 
     def first_move_choice():
@@ -773,8 +752,6 @@ def hard_game_level():
                 else:
                     i = random.randint(1, len(list) - 1)
                     computer_tanks_list.append(str(i))
-                    # print(i)
-                    # print(computer_tanks_list)
                     time.sleep(1)
                     break
         print('The computer has made its choice\n')
@@ -814,9 +791,6 @@ def hard_game_level():
                 maded_moves.append(user_shot)
                 possible_moves.remove(int(user_shot))
                 time.sleep(2)
-                # print(user_shot)
-                # print(maded_moves)
-                # print(possible_moves)
                 break
 
     def validate_user_shot(value):
@@ -888,11 +862,8 @@ def hard_game_level():
             print('Exactly! You knocked out an enemy tank\n')
             list.remove(shot[index])
             time.sleep(2)
-            # print(list)
-            time.sleep(2)
         else:
             print('Miss ): Maybe you should aim better next time?\n')
-            # print(list)
             time.sleep(2)
 
     def check_computer_hit_the_target(shot, list):
@@ -906,11 +877,8 @@ def hard_game_level():
             print('Damn! He knocked out your tank\n')
             list.remove(shot[index])
             time.sleep(2)
-            # print(list)
-            time.sleep(2)
         else:
             print('Ha-ha! Computer missed\n')
-            # print(list)
             time.sleep(2)
 
     def first_move_choice():
