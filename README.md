@@ -47,3 +47,29 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 8. As a user, I want to be able be notified if i win or lose.
 9. As a user, I want to repeat the qame
 10. As a user, I want to repeat the qame with another difficulty
+
+### Site Owner Stories
+
+1. As a owner of the site, i want increase in the number of guests;
+
+## Technical Design
+
+### Flowchart
+
+<details><summary>Flowchart</summary>
+<img src="">
+<!-- NEED SOURCE -->
+</details>
+
+## Technologies Used
+
+### Languages
+
+- Python
+
+### Frameworks & Tools
+
+- Lucidchart was used to build flowchart.
+- GitHub was used for saving and storing files.
+- GitPod was the IDE used for writing code. 
+<!-- MORE INFO -->
