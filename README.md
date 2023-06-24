@@ -135,3 +135,19 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 <img src="">
 <!-- NEED SOURCE -->
 </details>
+
+## Testing
+
+### Validation
+
+PEP8 Python Validator was used to validate the code.
+
+Code validates without error
+
+<!-- OR -->
+
+The code (due to its specificity, large volume and complexity) has warning notices, but no code errors were detected during validation
+
+<details><summary>Validation</summary>
+<img src="docs/testing/homepage-validation.jpg">
+</details>
