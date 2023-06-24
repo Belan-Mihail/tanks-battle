@@ -38,7 +38,7 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 ### User Stories 
 
 1. As a user, I want to be able to enter my name.
-2. As a user, I want to play with computer.
+2. As a user, I want to receive a small welcome message explaining the essence of the game at the beginning of the game.
 3. As a user, I want to have a choice of game difficulty.
 4. As a user, I want to be notified that my shot hit the target 
 5. As a user, I want to be notified that computers shot hit the target
@@ -73,3 +73,28 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 - GitHub was used for saving and storing files.
 - GitPod was the IDE used for writing code. 
 <!-- MORE INFO -->
+
+## Features
+
+### Start page display
+
+- When the user run the program this area is displayed
+- It consists in a small welcome message explaining the essence of the game
+- The user is also prompted to enter his name or nickname
+- User stories covered: 1, 2
+
+<details><summary>Start page display</summary>
+<img src="">
+<!-- NEED SOURCE -->
+</details>
+
+### User Signup or Login Area
+<!-- NEED -->
+
+### Difficulty selection
+
+- After the user run the program and entre his name
+- It consists in a small message with instructions for choosing the difficulty of the game
+- The user can select the desired difficulty level by pressing from 1 to 3
+- User stories covered: 3
+
