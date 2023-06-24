@@ -22,3 +22,28 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 ### Site Owner Goals
 
   - Create a game similar to sea battle which is easy and clear to user
+
+## User Experience
+
+### Target Audience
+
+- People of different ages who want to play a logic game similar to a sea battle.
+
+### User Requrements and Expectations
+
+- Simple and user-friendly to use;
+- Interactive interaction with the user (reaction to user actions)
+
+
+### User Stories 
+
+1. As a user, I want to be able to enter my name.
+2. As a user, I want to play with computer.
+3. As a user, I want to have a choice of game difficulty.
+4. As a user, I want to be notified that my shot hit the target 
+5. As a user, I want to be notified that computers shot hit the target
+6. As a user, I want to be notified of possible moves
+7. As a user, I want to be notified how many and what kind of tanks I have during the game
+8. As a user, I want to be able be notified if i win or lose.
+9. As a user, I want to repeat the qame
+10. As a user, I want to repeat the qame with another difficulty
