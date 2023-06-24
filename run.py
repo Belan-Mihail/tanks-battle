@@ -734,7 +734,7 @@ def hard_game_level():
     # computer tanks
     computer_tanks = []
 
-    def computer_tanks_choice(list):
+    def computer_tanks_choice(list_comp_tanks_hard):
         """
         A function that determines the computer's tanks
         by choosing a random number from a given list
@@ -746,11 +746,11 @@ def hard_game_level():
         time.sleep(2)
         computer_tanks_list = []
         while len(computer_tanks_list) != 5:
-            for i in list:
+            for i in list_comp_tanks_hard:
                 if i in computer_tanks_list:
                     continue
                 else:
-                    i = random.randint(1, len(list) - 1)
+                    i = random.randint(1, len(list_comp_tanks_hard) - 1)
                     computer_tanks_list.append(str(i))
                     time.sleep(1)
                     break
@@ -817,18 +817,18 @@ def hard_game_level():
 
         return True
 
-    def shuffle_computer_move(list):
+    def shuffle_computer_move(list_shuf_comp_mov_hard):
         """
         A function that generates a list of random possible computer moves
         """
-        random.shuffle(list)
+        random.shuffle(list_shuf_comp_mov_hard)
         shuffle = []
-        for i in list:
+        for i in list_shuf_comp_mov_hard:
             shuffle.append(i)
 
         return shuffle
 
-    def computer_move(list):
+    def computer_move(list_comp_mov_hard):
         """
         A function that plays a computer shot and
         writes its shot to the corresponding variable
@@ -839,7 +839,7 @@ def hard_game_level():
         time.sleep(2)
         print('He shoots straight...')
 
-        for value in list:
+        for value in list_comp_mov_hard:
             if value in computer_moves:
                 continue
             else:
@@ -851,31 +851,31 @@ def hard_game_level():
     # computer shuffle move
     shuffle_computer_move = shuffle_computer_move(computer_possible_tanks_list)
 
-    def check_user_hit_the_target(shot, list):
+    def check_user_hit_the_target(shot, list_user_hit_target_hard):
         """
         a function that checks if the user is in the tank
         """
         print('Checking if you hit the tank\n')
         time.sleep(2)
         index = len(shot) - 1
-        if shot[index] in list:
+        if shot[index] in list_user_hit_target_hard:
             print('Exactly! You knocked out an enemy tank\n')
-            list.remove(shot[index])
+            list_user_hit_target_hard.remove(shot[index])
             time.sleep(2)
         else:
             print('Miss ): Maybe you should aim better next time?\n')
             time.sleep(2)
 
-    def check_computer_hit_the_target(shot, list):
+    def check_computer_hit_the_target(shot, list_comp_hit_target_hard):
         """
         a function that checks if the computer got into the user's tank
         """
         print('Checking if the computer hit the target\n')
         time.sleep(2)
         index = len(shot) - 1
-        if shot[index] in list:
+        if shot[index] in list_comp_hit_target_hard:
             print('Damn! He knocked out your tank\n')
-            list.remove(shot[index])
+            list_comp_hit_target_hard.remove(shot[index])
             time.sleep(2)
         else:
             print('Ha-ha! Computer missed\n')
