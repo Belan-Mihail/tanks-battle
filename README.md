@@ -91,6 +91,11 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 ### User Signup or Login Area
 <!-- NEED -->
 
+<details><summary>User Signup or Login Area</summary>
+<img src="">
+<!-- NEED SOURCE -->
+</details>
+
 ### Difficulty selection
 
 - After the user run the program and entre his name
@@ -98,3 +103,35 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 - The user can select the desired difficulty level by pressing from 1 to 3
 - User stories covered: 3
 
+<details><summary>Difficulty selection</summary>
+<img src="">
+<!-- NEED SOURCE -->
+</details>
+
+### Game process
+
+- After the user run the program and entre his name and choose difficulty of the game
+- It consists:
+1. User selection of a given number of tanks
+2. Computer selection of a given number of tanks
+3. Random determination of the first move
+4. Alternate implementation by the user and the computer of shots at the enemy
+5. Displaying the results of a shot and other useful information (number of tanks and their number, possible moves)
+6. Displaying a message about the victory or defeat of the user, depending on the outcome of the game
+- User stories covered: 4,5,6,7,8
+
+<details><summary>Game process</summary>
+<img src="">
+<!-- NEED SOURCE -->
+</details>
+
+### Repeat game
+
+- After the user run the program and entre his name and choose difficulty of the game at end of game process
+- It consist in the display of the offer message to play again and instructions on the user's response
+- If the user wants to play again, he will be presented with the opportunity to re-select the desired level of difficulty 
+
+<details><summary>Repeat game</summary>
+<img src="">
+<!-- NEED SOURCE -->
+</details>
