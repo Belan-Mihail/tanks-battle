@@ -24,17 +24,42 @@ def check_user():
     and receives data from the user
     """
     print("""The game has the right to accept only users
-    who have passed the preliminary free registration""")
+    who have passed the preliminary free registration\n""")
     time.sleep(1)
-    print('Have you already registered?')
+    print('Have you already registered?\n')
 
-    user_registration_answer = input("Enter Y or N").lower()
+    user_registration_answer = input("Enter Y or N\n").lower()
 
-    while user_registration_answer != 'y' and choice != 'n':
-        print('Incorrect data entered. Enter Y or N')
+    while user_registration_answer != 'y' and user_registration_answer != 'n':
+        print('Incorrect data entered. Enter Y or N\n')
         user_registration_answer = input().lower()
     return user_registration_answer
 
+
+user_registration_answer = check_user()
+
+
+def signup():
+    print("""To gain access to the game, 
+    please enter your username and password""")
+
+    
+
+
+
+
+def new_user_registration():
+    print('i')
+
+
+def check_user_registration_answer(user_registration_answer):
+    if user_registration_answer == 'y':
+        signup()
+    elif user_registration_answer == 'n':
+        new_user_registration()
+
+
+check_user_registration_answer(user_registration_answer)
 
 
 def introduction_func():
