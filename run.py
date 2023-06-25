@@ -30,14 +30,19 @@ def check_user():
 
     user_registration_answer = input("Enter Y or N\n").lower()
 
-    while user_registration_answer != 'y' and user_registration_answer != 'n':
+    if user_registration_answer == 'y':
+        signup()
+    elif user_registration_answer == 'n':
+        new_user_registration()
+    else:
         print('Incorrect data entered. Enter Y or N\n')
-        user_registration_answer = input().lower()
+        check_user()
+
+
+    # while user_registration_answer != 'y' and user_registration_answer != 'n':
+    #     print('Incorrect data entered. Enter Y or N\n')
+    #     user_registration_answer = input().lower()
     return user_registration_answer
-
-
-user_registration_answer = check_user()
-
 
 def signup():
     print("""To gain access to the game, 
@@ -45,13 +50,11 @@ def signup():
 
     login = input("Enter your login\n")
 
-    print()
+    if (logins.find(login)) is not True:
+        print('The login you entered is missing')
+        check_user()
 
     password = input("Enter your password\n")
-
-    
-
-
 
 
 
@@ -60,14 +63,8 @@ def new_user_registration():
     print('i')
 
 
-def check_user_registration_answer(user_registration_answer):
-    if user_registration_answer == 'y':
-        signup()
-    elif user_registration_answer == 'n':
-        new_user_registration()
+check_user()
 
-
-check_user_registration_answer(user_registration_answer)
 
 
 def introduction_func():
