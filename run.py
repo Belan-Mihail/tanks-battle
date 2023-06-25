@@ -14,8 +14,8 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('tanksbattle')
 
-users = SHEET.worksheet('users')
-users_complete = users.get_all_records()
+logins = SHEET.worksheet('logins')
+passwords = SHEET.worksheet('passwords')
 
 
 def check_user():
@@ -41,9 +41,17 @@ user_registration_answer = check_user()
 
 def signup():
     print("""To gain access to the game, 
-    please enter your username and password""")
+    please enter your login and password""")
+
+    login = input("Enter your login\n")
+
+    print()
+
+    password = input("Enter your password\n")
 
     
+
+
 
 
 
