@@ -151,3 +151,28 @@ The code (due to its specificity, large volume and complexity) has warning notic
 <details><summary>Validation</summary>
 <img src="docs/testing/homepage-validation.jpg">
 </details>
+
+### Testing User Stories
+
+   <!-- 1. As a user, I want to display my name for later use by the site.
+
+   **Action** | **Result** 
+ -----------| ----------  
+ 1.Being on the home page, scroll to the middle. Write your name in input form | You can display your name for later use by the site 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories-test-evidence/first-user-story-evidence-1.jpg">
+<img src="docs/user-stories-test-evidence/first-user-story-evidence-2.jpg">
+</details>  -->
+
+## Bugs
+
+<!-- - The site logo was designed as a simple link and was not a first level heading, which is why the site did not have a first level heading
+
+    **Actions**: add a first level heading to the logo link;
+
+
+    **Result**: the site logo also became the first level heading and the first level heading appeared on the site;
+
+
+    **Status**: bug fixed; -->
