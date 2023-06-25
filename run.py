@@ -45,22 +45,41 @@ def check_user():
     return user_registration_answer
 
 def signup():
-    print("""To gain access to the game, 
+    print("""To gain access to the game,
     please enter your login and password""")
 
     login = input("Enter your login\n")
 
-    if (logins.find(login)) is not True:
-        print('The login you entered is missing')
+    if (logins.find(login)) is None:
+        print('Login you entered is missing')
         check_user()
+    
 
     password = input("Enter your password\n")
 
-
+    if (passwords.find(password)) is None:
+        print('Password you entered is missing')
+        check_user()
 
 
 def new_user_registration():
-    print('i')
+    print('For free registration on the site, create a login and password')
+    print('Enter your login')
+    new_login = input().split()
+    print(new_login)
+    logins.append_row(new_login)
+
+    print('Enter your password')
+    new_password = input().split()
+    print(new_password)
+    passwords.append_row(new_password)
+
+    new_login_str = ''.join(new_login)
+
+    print(f'Hi {new_login_str}')
+    print("""Your password and login are saved. 
+    Now you need to use them to login to the game""")
+    signup()
 
 
 check_user()
@@ -79,12 +98,11 @@ def introduction_func():
 
     print(introduction)
     time.sleep(3)
-    user = input('Enter your name or nickname\n')
-    return user
+    
 
 
-# call introduction_func and write the return value to a variable
-user_name = introduction_func()
+# call introduction_func
+introduction_func()
 
 
 def game_difficulty_selection():
@@ -93,7 +111,7 @@ def game_difficulty_selection():
     of the game requested by the user is calculated
     """
     print()
-    print(f'Hi {user_name}! First... choose the difficulty of the game')
+    print('First... choose the difficulty of the game')
     time.sleep(2)
     print('Enter a number from 1 to 3, where 3 is the highest difficulty\n')
     choice = input()
