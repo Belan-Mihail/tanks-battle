@@ -1,5 +1,40 @@
 import time
 import random
+import gspread
+from google.oauth2.service_account import Credentials
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file('cred.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('tanksbattle')
+
+users = SHEET.worksheet('users')
+users_complete = users.get_all_records()
+
+
+def check_user():
+    """
+    The function checks if the user is a registered user or not
+    and receives data from the user
+    """
+    print("""The game has the right to accept only users
+    who have passed the preliminary free registration""")
+    time.sleep(1)
+    print('Have you already registered?')
+
+    user_registration_answer = input("Enter Y or N").lower()
+
+    while user_registration_answer != 'y' and choice != 'n':
+        print('Incorrect data entered. Enter Y or N')
+        user_registration_answer = input().lower()
+    return user_registration_answer
+
 
 
 def introduction_func():
