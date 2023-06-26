@@ -19,12 +19,11 @@ A simple logic game similar to a sea battle. In this game, the player will have 
     1. [Languages](#languages)
     2. [Frameworks & Tools](#frameworks-&-tools)
 5. [Features](#features)
-    1. [Start page display](#start-page-display)
+    1. [User Signup or Login Area](#user-signup-or-login-area)
     2. [Start game display](#start-game-display)
-    3. [User Signup or Login Area](#user-signup-or-login-area)
-    4. [Difficulty selection](#difficulty-selection)
-    5. [Game process](#game-process)
-    6. [Repeat game](#repeat-game)
+    3. [Difficulty selection](#difficulty-selection)
+    4. [Game process](#game-process)
+    5. [Repeat game](#repeat-game)
 6. [Testing](#testing)
     1. [PEP8 Validation](#pep8-validation)
     2. [Testing User Stories](#testing-user-stories)
@@ -94,7 +93,7 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 
 ## Features
 
-### Start page display
+### User Signup or Login Area
 
 - When the user run the program this area is displayed
 - it consists of user verification, authorization and new user registration functions
@@ -113,13 +112,6 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 <!-- NEED SOURCE -->
 </details>
 
-### User Signup or Login Area
-<!-- NEED -->
-
-<details><summary>User Signup or Login Area</summary>
-<img src="">
-<!-- NEED SOURCE -->
-</details>
 
 ### Difficulty selection
 
@@ -171,8 +163,7 @@ Code validates without error
 
 
 <details><summary>Validation</summary>
-<img src="">
-<!-- INFO -->
+<img src="assets/images/validation_tanks_battle.jpg">
 </details>
 
 ### Testing User Stories
