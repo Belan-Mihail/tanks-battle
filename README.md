@@ -37,7 +37,7 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 
 ### User Stories 
 
-1. As a user, I want to be able to enter my name.
+1. As a user, I want to be able to enter my login.
 2. As a user, I want to receive a small welcome message explaining the essence of the game at the beginning of the game.
 3. As a user, I want to have a choice of game difficulty.
 4. As a user, I want to be notified that my shot hit the target 
@@ -144,26 +144,60 @@ PEP8 Python Validator was used to validate the code.
 
 Code validates without error
 
-<!-- OR -->
-
-The code (due to its specificity, large volume and complexity) has warning notices, but no code errors were detected during validation
 
 <details><summary>Validation</summary>
-<img src="docs/testing/homepage-validation.jpg">
+<img src="">
+<!-- INFO -->
 </details>
 
 ### Testing User Stories
 
-   <!-- 1. As a user, I want to display my name for later use by the site.
+   1. As a user, I want to be able to enter my login.
 
    **Action** | **Result** 
- -----------| ----------  
- 1.Being on the home page, scroll to the middle. Write your name in input form | You can display your name for later use by the site 
+  -----------| ----------  
+ When starting the game, the user's login and password are requested and he is offered to go through the registration procedure, which also requires a login | You can enter your user's login  
+
 
 <details><summary>Screenshot evidences</summary>
-<img src="docs/user-stories-test-evidence/first-user-story-evidence-1.jpg">
-<img src="docs/user-stories-test-evidence/first-user-story-evidence-2.jpg">
-</details>  -->
+<img src="docs/user-stories-test-evidence/first-user-story-evidence.jpg">
+</details> 
+
+  2. As a user, I want to receive a small welcome message explaining the essence of the game at the beginning of the game.
+
+
+   **Action** | **Result** 
+  -----------| ----------  
+ At the start of the game, after authorization, the user is shown a short message explaining the essence of the game | You can receive a small welcome message explaining the essence of the game at the beginning of the game  
+
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories-test-evidence/second-user-story-evidence.jpg">
+</details> 
+
+  3. As a user, I want to have a choice of game difficulty.
+
+
+   **Action** | **Result** 
+  -----------| ----------  
+ At the start of the game, after authorization, the user can choose difficulty of the game | You have a choice of game difficulty. 
+ There are three difficulty levels of the game | You have a choice of game difficulty.  
+
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories-test-evidence/third-user-story-evidence.jpg">
+</details> 
+
+<!-- 2. As a user, I want to receive a small welcome message explaining the essence of the game at the beginning of the game.
+3. As a user, I want to have a choice of game difficulty.
+4. As a user, I want to be notified that my shot hit the target 
+5. As a user, I want to be notified that computers shot hit the target
+6. As a user, I want to be notified of possible moves
+7. As a user, I want to be notified how many and what kind of tanks I have during the game
+8. As a user, I want to be able be notified if i win or lose.
+9. As a user, I want to repeat the qame
+10. As a user, I want to repeat the qame with another difficulty --> -->
+
 
 ## Bugs
 
