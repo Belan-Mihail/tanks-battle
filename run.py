@@ -38,52 +38,64 @@ def check_user():
         print('Incorrect data entered. Enter Y or N\n')
         check_user()
 
-
-    # while user_registration_answer != 'y' and user_registration_answer != 'n':
-    #     print('Incorrect data entered. Enter Y or N\n')
-    #     user_registration_answer = input().lower()
     return user_registration_answer
 
+
 def signup():
+    """
+    The function through which registered users are logged in
+    """
     print("""To gain access to the game,
     please enter your login and password""")
 
+    # input login
     login = input("Enter your login\n")
 
+    # google sheets login check
     if (logins.find(login)) is None:
         print('Login you entered is missing')
         check_user()
-    
 
+    # input password
     password = input("Enter your password\n")
 
+    # password sheets login check
     if (passwords.find(password)) is None:
         print('Password you entered is missing')
         check_user()
 
 
 def new_user_registration():
+    """
+    The function of which is the registration of a new user
+    """
     print('For free registration on the site, create a login and password')
     print('Enter your login')
+
     new_login = input().split()
-    print(new_login)
+
+    # add login to google sheets
     logins.append_row(new_login)
 
     print('Enter your password')
     new_password = input().split()
-    print(new_password)
+
+    # add password to google sheets
     passwords.append_row(new_password)
 
+    # variable converting username to greeting
     new_login_str = ''.join(new_login)
 
     print(f'Hi {new_login_str}')
-    print("""Your password and login are saved. 
+    print("""Your password and login are saved.
     Now you need to use them to login to the game""")
+
+    # function call  signup
     signup()
 
 
+# function call  check_user
 check_user()
-
 
 
 def introduction_func():
@@ -98,7 +110,6 @@ def introduction_func():
 
     print(introduction)
     time.sleep(3)
-    
 
 
 # call introduction_func
