@@ -225,14 +225,53 @@ Code validates without error
 <img src="docs/user-stories-test-evidence/sixth-user-story-evidence.jpg">
 </details> 
 
-<!-- 
+  7. As a user, I want to be notified how many and what kind of tanks I have during the game
 
-\
-6. As a user, I want to be notified of possible moves
-7. As a user, I want to be notified how many and what kind of tanks I have during the game
-8. As a user, I want to be able be notified if i win or lose.
-9. As a user, I want to repeat the qame
-10. As a user, I want to repeat the qame with another difficulty --> -->
+
+   **Action** | **Result** 
+  -----------| ----------  
+ Each time before the player's move, a notification is displayed on the screen with a information of how many and what kind of tanks has user | User will be notified how many and what kind of tanks he has during the game. 
+  
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories-test-evidence/seventh-user-story-evidence.jpg">
+</details> 
+
+
+  8. As a user, I want to be able be notified if i win or lose.
+
+
+   **Action** | **Result** 
+  -----------| ----------  
+ When the player or the computer has no tanks left, a corresponding message is displayed on the screen | User will be notified if he win or lose. 
+  
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories-test-evidence/eighth-user-story-evidence.jpg">
+</details> 
+
+ 9. As a user, I want to repeat the qame.
+
+
+   **Action** | **Result** 
+  -----------| ----------  
+ After the end of the game, regardless of its outcome, the player is invited to re-play the game | User can repeat the qame. 
+  
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories-test-evidence/ninth-user-story-evidence.jpg">
+</details> 
+
+10. As a user, I want to repeat the qame with another difficulty.
+
+
+   **Action** | **Result** 
+  -----------| ----------  
+ After restarting the game, the player is prompted to choose one of three possible options for the difficulty levels of the game. | User can repeat the qame with another difficulty. 
+  
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories-test-evidence/tenth-user-story-evidence.jpg">
+</details> 
 
 
 ## Bugs
