@@ -8,6 +8,28 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 1. [Project Goals](#project-goals)
     1. [User Goals](#user-goals)
     2. [Site Owner Goals](#site-owner-goals)
+2. [User Experience](#user-experience)
+    1. [Target Audience](#target-audience)
+    2. [User Requirements and Expectations](#user-requirements-and-expectations)
+    3. [User Stories](#user-stories)
+    4. [Site Owner Stories](#site-owner-stories)
+3. [Technical Design](#technical-design)
+    1. [Flowchart](#flowchart)
+4. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks & Tools](#frameworks-&-tools)
+5. [Features](#features)
+    1. [Start page display](#start-page-display)
+    2. [User Signup or Login Area](#user-signup-or-login-area)
+    3. [Difficulty selection](#difficulty-selection)
+    4. [Game process](#game-process)
+    5. [Repeat game](#repeat-game)
+6. [Testing](#testing)
+    1. [PEP8 Validation](#pep8-validation)
+    2. [Testing User Stories](#testing-user-stories)
+7. [Bugs](#bugs)
+
+
 
 
 ## Project Goals
@@ -138,7 +160,7 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 
 ## Testing
 
-### Validation
+### PEP8 Validation
 
 PEP8 Python Validator was used to validate the code.
 
