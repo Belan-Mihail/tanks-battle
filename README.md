@@ -20,17 +20,15 @@ A simple logic game similar to a sea battle. In this game, the player will have 
     2. [Frameworks & Tools](#frameworks-&-tools)
 5. [Features](#features)
     1. [Start page display](#start-page-display)
-    2. [User Signup or Login Area](#user-signup-or-login-area)
-    3. [Difficulty selection](#difficulty-selection)
-    4. [Game process](#game-process)
-    5. [Repeat game](#repeat-game)
+    2. [Start game display](#start-game-display)
+    3. [User Signup or Login Area](#user-signup-or-login-area)
+    4. [Difficulty selection](#difficulty-selection)
+    5. [Game process](#game-process)
+    6. [Repeat game](#repeat-game)
 6. [Testing](#testing)
     1. [PEP8 Validation](#pep8-validation)
     2. [Testing User Stories](#testing-user-stories)
 7. [Bugs](#bugs)
-
-
-
 
 ## Project Goals
 
@@ -56,7 +54,6 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 - Simple and user-friendly to use;
 - Interactive interaction with the user (reaction to user actions)
 
-
 ### User Stories 
 
 1. As a user, I want to be able to enter my login.
@@ -79,8 +76,7 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 ### Flowchart
 
 <details><summary>Flowchart</summary>
-<img src="">
-<!-- NEED SOURCE -->
+<img src="assets/images/flowchart-tanks-battle.jpg">
 </details>
 
 ## Technologies Used
@@ -101,9 +97,16 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 ### Start page display
 
 - When the user run the program this area is displayed
+- it consists of user verification, authorization and new user registration functions
+- The user is also prompted to enter his login
+- User stories covered: 1
+
+### Start game display
+
+- When the user run the program this area is displayed
 - It consists in a small welcome message explaining the essence of the game
 - The user is also prompted to enter his name or nickname
-- User stories covered: 1, 2
+- User stories covered: 2
 
 <details><summary>Start page display</summary>
 <img src="">
