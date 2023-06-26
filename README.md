@@ -188,10 +188,46 @@ Code validates without error
 <img src="docs/user-stories-test-evidence/third-user-story-evidence.jpg">
 </details> 
 
-<!-- 2. As a user, I want to receive a small welcome message explaining the essence of the game at the beginning of the game.
-3. As a user, I want to have a choice of game difficulty.
-4. As a user, I want to be notified that my shot hit the target 
-5. As a user, I want to be notified that computers shot hit the target
+
+  4. As a user, I want to be notified that my shot hit the target.
+
+
+   **Action** | **Result** 
+  -----------| ----------  
+ In case of hitting an enemy tank, a corresponding message is displayed on the screen | User will be notified when it hits an enemy tank. 
+  
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories-test-evidence/fourth-user-story-evidence.jpg">
+</details> 
+
+  5. As a user, I want to be notified that computers shot hit the target.
+
+
+   **Action** | **Result** 
+  -----------| ----------  
+ If the computer enters the player's tank, a corresponding notification will be displayed on the screen | User will be notified when computers shot hits the target. 
+  
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories-test-evidence/fifth-user-story-evidence.jpg">
+</details> 
+
+  6. As a user, I want to be notified of possible moves.
+
+
+   **Action** | **Result** 
+  -----------| ----------  
+ Each time before the player's move, a notification is displayed on the screen with a list of possible moves updated during the game | User will be notified of possible moves. 
+  
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories-test-evidence/sixth-user-story-evidence.jpg">
+</details> 
+
+<!-- 
+
+\
 6. As a user, I want to be notified of possible moves
 7. As a user, I want to be notified how many and what kind of tanks I have during the game
 8. As a user, I want to be able be notified if i win or lose.
