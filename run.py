@@ -23,11 +23,11 @@ def check_user():
     The function checks if the user is a registered user or not
     and receives data from the user
     """
+    print()
     print("""The game has the right to accept only users
     who have passed the preliminary free registration\n""")
-    time.sleep(1)
+    time.sleep(2)
     print('Have you already registered?\n')
-
     user_registration_answer = input("Enter Y or N\n").lower()
 
     if user_registration_answer == 'y':
@@ -45,23 +45,26 @@ def signup():
     """
     The function through which registered users are logged in
     """
+    print()
     print("""To gain access to the game,
-    please enter your login and password""")
-
+    please enter your login and password\n""")
+    time.sleep(2)
+    print()
     # input login
     login = input("Enter your login\n")
 
     # google sheets login check
     if (logins.find(login)) is None:
-        print('Login you entered is missing')
+        print('Login you entered is missing\n')
         check_user()
 
+    print()
     # input password
     password = input("Enter your password\n")
 
     # password sheets login check
     if (passwords.find(password)) is None:
-        print('Password you entered is missing')
+        print('Password you entered is missing\n')
         check_user()
 
 
@@ -70,13 +73,15 @@ def new_user_registration():
     The function of which is the registration of a new user
     """
     print('For free registration on the site, create a login and password')
+    time.sleep(2)
+    print()
     print('Enter your login')
-
+    print()
     new_login = input().split()
 
     # add login to google sheets
     logins.append_row(new_login)
-
+    print()
     print('Enter your password')
     new_password = input().split()
 
@@ -85,7 +90,8 @@ def new_user_registration():
 
     # variable converting username to greeting
     new_login_str = ''.join(new_login)
-
+    print()
+    time.sleep(1)
     print(f'Hi {new_login_str}')
     print("""Your password and login are saved.
     Now you need to use them to login to the game""")
