@@ -100,6 +100,11 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 - The user is also prompted to enter his login
 - User stories covered: 1
 
+<details><summary>User Signup and Login Area</summary>
+<img src="docs/features-images/user-signup-and-login-area.jpg">
+<img src="docs/features-images/user-signup-and-login-area-1.jpg">
+</details>
+
 ### Start game display
 
 - When the user run the program this area is displayed
@@ -108,8 +113,7 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 - User stories covered: 2
 
 <details><summary>Start page display</summary>
-<img src="">
-<!-- NEED SOURCE -->
+<img src="docs/features-images/start-page-display.jpg">
 </details>
 
 
@@ -121,8 +125,7 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 - User stories covered: 3
 
 <details><summary>Difficulty selection</summary>
-<img src="">
-<!-- NEED SOURCE -->
+<img src="docs/features-images/difficulty-selection.jpg">
 </details>
 
 ### Game process
@@ -138,8 +141,9 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 - User stories covered: 4,5,6,7,8
 
 <details><summary>Game process</summary>
-<img src="">
-<!-- NEED SOURCE -->
+<img src="docs/features-images/game-process.jpg">
+<img src="docs/features-images/game-process-1.jpg">
+<img src="docs/features-images/game-process-2.jpg">
 </details>
 
 ### Repeat game
@@ -147,10 +151,10 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 - After the user run the program and entre his name and choose difficulty of the game at end of game process
 - It consist in the display of the offer message to play again and instructions on the user's response
 - If the user wants to play again, he will be presented with the opportunity to re-select the desired level of difficulty 
+- User stories covered: 9,10
 
 <details><summary>Repeat game</summary>
-<img src="">
-<!-- NEED SOURCE -->
+<img src="docs/features-images/repeat-game.jpg">
 </details>
 
 ## Testing
