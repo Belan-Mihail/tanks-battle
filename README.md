@@ -299,12 +299,44 @@ Code validates without error
 
 ## Bugs
 
-<!-- - The site logo was designed as a simple link and was not a first level heading, which is why the site did not have a first level heading
+- When restarting the game, the previously selected game difficulty is saved
 
-    **Actions**: add a first level heading to the logo link;
-
-
-    **Result**: the site logo also became the first level heading and the first level heading appeared on the site;
+    **Actions**: the restart function was moved from the game_cycle function block and called in the main function block. Added pick_user_level_game attribute to main function;
 
 
-    **Status**: bug fixed; -->
+    **Result**: After restarting the game, it was possible to re-select the difficulty level;
+
+
+    **Status**: bug fixed;
+
+
+- The function used to determine the tanks of the computer in the easy difficulty level did not work in the medium and hard difficulty, where it was required to select not just one, but several tanks
+
+    **Actions**: A loop was added with the required number of iterations to iterate through the values of the list of possible tanks and randomize the added value.;
+
+
+    **Result**: The function began to work correctly on medium and hard difficulty;
+
+
+    **Status**: bug fixed;
+
+
+- When checking the user's shot, there was no check for the repetition of the entered value
+
+    **Actions**: A conditional expression if in was added to the try block of the validate_user_shot function to exclude a detected error;
+
+
+    **Result**: When entering a repeated shot value, the user began to receive an error notification;
+
+
+    **Status**: bug fixed;
+
+- The list of possible computer moves was not suitable for randomizing the computer's actions.
+
+    **Actions**: The list of possible computer moves has been looped through with the shuffle function. The resulting values have been added to the computer's list of random moves;
+
+
+    **Result**: The resulting list became suitable for randomizing computer moves;
+
+
+    **Status**: bug fixed;
