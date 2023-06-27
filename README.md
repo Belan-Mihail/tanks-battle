@@ -181,6 +181,7 @@ Code validates without error
 
 <details><summary>Screenshot evidences</summary>
 <img src="docs/user-stories-test-evidence/first-user-story-evidence.jpg">
+<img src="docs/user-stories-test-evidence/first-user-story-evidence-1.jpg">
 </details> 
 
   2. As a user, I want to receive a small welcome message explaining the essence of the game at the beginning of the game.
@@ -219,6 +220,7 @@ Code validates without error
 
 <details><summary>Screenshot evidences</summary>
 <img src="docs/user-stories-test-evidence/fourth-user-story-evidence.jpg">
+<img src="docs/user-stories-test-evidence/fourth-user-story-evidence-1.jpg">
 </details> 
 
   5. As a user, I want to be notified that computers shot hit the target.
@@ -231,6 +233,7 @@ Code validates without error
 
 <details><summary>Screenshot evidences</summary>
 <img src="docs/user-stories-test-evidence/fifth-user-story-evidence.jpg">
+<img src="docs/user-stories-test-evidence/fifth-user-story-evidence-1.jpg">
 </details> 
 
   6. As a user, I want to be notified of possible moves.
