@@ -358,3 +358,29 @@ Code validates without error
 **How to fork the website:**
 1. Go to the GitHub repository
 2. Click on Fork button
+
+
+## Credits
+
+### Content 
+
+**Text content** are owned by the developer.
+
+Idea of  game has been taken from sea battle game 
+
+### Code
+
+The following code idea was taken from Love Sandwiches Project:
+
+ - Validate_user_details
+ - How to import gspread
+-  How to import Credentials from google.oauth
+
+## Acknowledgements
+
+I would like to express my sincere gratitude:
+
+  - My mentor Mo Shami for his advice and support.
+  - My daughter Alisa and my wife Snizhana for always giving me inspiration and strength to go forward.
+  - The government of the city of Hamburg and the employees of the job center Mitti for my opportunity to study at these courses.
+  - To all people who are in solidarity and support Ukraine
