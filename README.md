@@ -340,3 +340,21 @@ Code validates without error
 
 
     **Status**: bug fixed;
+
+
+## Deployment
+
+<!-- NEED INFO -->
+
+**How to clone the website:**
+1. On GitHub.com, navigate to the main page of the repository.
+2. click "Code" button.
+3. Select HTTPS, SSH, or Github CLI.
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY) 
+7. Press Enter to create your local clone. 
+
+**How to fork the website:**
+1. Go to the GitHub repository
+2. Click on Fork button
