@@ -336,6 +336,10 @@ def easy_game_level():
                 raise ValueError(
                     "You have already entered this value. Choose another"
                 )
+            if ' ' in value:
+                raise ValueError(
+                    "spaces in values are not allowed"
+                )
         except ValueError as e:
             print(f"Invalid data: {e}, please try again.\n")
             return False
@@ -645,6 +649,10 @@ def medium_game_level():
             if value in user_maded_moves:
                 raise ValueError(
                     "You have already entered this value. Choose another"
+                )
+            if ' ' in value:
+                raise ValueError(
+                    "spaces in values are not allowed"
                 )
         except ValueError as e:
             print(f"Invalid data: {e}, please try again.\n")
@@ -968,6 +976,10 @@ def hard_game_level():
             if value in user_maded_moves:
                 raise ValueError(
                     "You have already entered this value. Choose another"
+                )
+            if ' ' in value:
+                raise ValueError(
+                    "spaces in values are not allowed"
                 )
         except ValueError as e:
             print(f"Invalid data: {e}, please try again.\n")
