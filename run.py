@@ -17,6 +17,22 @@ SHEET = GSPREAD_CLIENT.open('tanksbattle')
 logins = SHEET.worksheet('logins')
 passwords = SHEET.worksheet('passwords')
 
+# welcome image
+print("              ||||||||    ")
+time.sleep(0.4)
+print("            |||||||||||")
+time.sleep(0.4)
+print("           |||||||||||||||||||||||||     |+| ")
+time.sleep(0.4)
+print("       ||||||||||||||||||")
+time.sleep(0.4)
+print("       |||||||||||||||||||||||")
+time.sleep(0.4)
+print("       |||||||||||||||||||||||")
+time.sleep(0.4)
+print("       |||||||||||||||||||||||")
+time.sleep(0.5)
+
 
 def check_user():
     """
