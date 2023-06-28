@@ -91,29 +91,54 @@ def new_user_registration():
     print('For free registration on the site, create a login and password')
     time.sleep(2)
     print()
-    print('Enter your login')
-    print()
-    new_login = input().split()
+    while True:
+        print('\nEnter your login')
+        print()
+        new_login = input()
+        print()
+        print('Enter your password')
+        new_password = input()
 
-    # add login to google sheets
-    logins.append_row(new_login)
-    print()
-    print('Enter your password')
-    new_password = input().split()
+        registration_data = check_registration_data(new_login, new_password)
 
-    # add password to google sheets
-    passwords.append_row(new_password)
+        if registration_data:
+            # add login to google sheets
+            logins.append_row(new_login.split())
+            # add password to google sheets
+            passwords.append_row(new_password.split())
+            # variable converting username to greeting
+            new_login_str = ''.join(new_login.split())
+            print()
+            time.sleep(1)
+            print(f'Hi {new_login_str}')
+            print("""Your password and login are saved.
+            Now you need to use them to login to the game""")
+            # function call  signup
+            signup()
+            break
 
-    # variable converting username to greeting
-    new_login_str = ''.join(new_login)
-    print()
-    time.sleep(1)
-    print(f'Hi {new_login_str}')
-    print("""Your password and login are saved.
-    Now you need to use them to login to the game""")
 
-    # function call  signup
-    signup()
+def check_registration_data(new_login, new_password):
+    try:
+        if len(new_login) < 4 or len(new_password) < 4:
+            raise ValueError(
+                "login and password should be more than 4 characters"
+            )
+        if (logins.find(new_login)):
+            raise ValueError(
+                "this login already exists"
+            )
+        if ' ' in new_login or ' ' in new_password:
+            raise ValueError(
+                "spaces in login and password are not allowed"
+            )
+    except ValueError as e:
+        print(f"Invalid input: {e}")
+        return False
+    else:
+        print("\nThank you for registering....")
+        time.sleep(1)
+        return True
 
 
 # function call  check_user
