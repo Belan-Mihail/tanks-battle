@@ -21,11 +21,12 @@ A simple logic game similar to a sea battle. In this game, the player will have 
     1. [Languages](#languages)
     2. [Frameworks & Tools](#frameworks-&-tools)
 5. [Features](#features)
-    1. [User Signup and Login Area](#user-signup-and-login-area)
-    2. [Start game display](#start-game-display)
-    3. [Difficulty selection](#difficulty-selection)
-    4. [Game process](#game-process)
-    5. [Repeat game](#repeat-game)
+    1. [Tank Image](#tank-image)
+    2. [User Signup and Login Area](#user-signup-and-login-area)
+    3. [Start game display](#start-game-display)
+    4. [Difficulty selection](#difficulty-selection)
+    5. [Game process](#game-process)
+    6. [Repeat game](#repeat-game)
 6. [Testing](#testing)
     1. [PEP8 Validation](#pep8-validation)
     2. [Testing User Stories](#testing-user-stories)
@@ -96,9 +97,11 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 - Lucidchart was used to build flowchart.
 - GitHub was used for saving and storing files.
 - GitPod was the IDE used for writing code. 
-<!-- MORE INFO -->
+- Render was used to deployment project
 
 ## Features
+
+### Tank Image
 
 ### User Signup and Login Area
 
