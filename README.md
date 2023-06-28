@@ -407,7 +407,17 @@ The website was tested on the following browsers:
 
 ## Deployment
 
-<!-- NEED INFO -->
+**The website was deployed using Render:**
+1. Visit [render.com](https://render.com/)
+2. Registration on the site
+3. Installing GitHub repositories
+4. Create new Web Service
+5. Add settings (name, region, build command, start command ...)
+6. Add environment variables
+7. Choose Auto-Deployment
+8. Press "Build & deployment" button
+
+[Live webpage](https://tanks-battle.onrender.com/)
 
 **How to clone the website:**
 1. On GitHub.com, navigate to the main page of the repository.
@@ -421,7 +431,6 @@ The website was tested on the following browsers:
 **How to fork the website:**
 1. Go to the GitHub repository
 2. Click on Fork button
-
 
 ## Credits
 
