@@ -1,6 +1,8 @@
 # Tanks Battle
 (Developer: Bilan Mykhailo)
 
+[Live webpage](https://tanks-battle.onrender.com/)
+
 A simple logic game similar to a sea battle. In this game, the player will have to fight against the computer in a tank duel. Victory in the game is awarded if all enemy tanks are knocked out
 
 ## Table of Content
@@ -28,6 +30,11 @@ A simple logic game similar to a sea battle. In this game, the player will have 
     1. [PEP8 Validation](#pep8-validation)
     2. [Testing User Stories](#testing-user-stories)
 7. [Bugs](#bugs)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
+    1. [Content](#content)
+    2. [Code](#code)
+10. [Acknowledgements](#acknowledgements)
 
 ## Project Goals
 
