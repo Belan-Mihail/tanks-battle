@@ -29,7 +29,9 @@ A simple logic game similar to a sea battle. In this game, the player will have 
     6. [Repeat game](#repeat-game)
 6. [Testing](#testing)
     1. [PEP8 Validation](#pep8-validation)
-    2. [Testing User Stories](#testing-user-stories)
+    2. [Device Testing](#device-testing)
+    3. [Browser compatibility](#browser-compatibility)
+    4. [Testing User Stories](#testing-user-stories)
 7. [Bugs](#bugs)
 8. [Deployment](#deployment)
 9. [Credits](#credits)
@@ -181,10 +183,25 @@ PEP8 Python Validator was used to validate the code.
 
 Code validates without error
 
-
 <details><summary>Validation</summary>
 <img src="docs/validation_tanks_battle.jpg">
 </details>
+
+### Device testing
+
+The website was tested on the following devices:
+
+   - Iphone 7;
+   - Iphone 12 Pro;
+
+
+### Browser compatibility
+
+The website was tested on the following browsers:
+
+   - Google Chrome;
+   - Yandex Browser;
+  
 
 ### Testing User Stories
 
