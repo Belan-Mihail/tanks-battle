@@ -357,6 +357,36 @@ Code validates without error
 
     **Status**: bug fixed;
 
+- In the function that checks the data entered by the user when choosing tanks, there was no check for gaps, which made it possible to enter non-correct data
+
+    **Actions**: Adding a check for spaces to the function that checks the data entered by the user when choosing tanks
+
+
+    **Result**: the possibility of introducing non-correct data is excluded
+
+
+    **Status**: bug fixed;
+
+- In the function that checks the data entered by the user during the shot, there was no check for gaps, which made it possible to enter inaccurate data
+
+    **Actions**: Adding a check for spaces to the function that checks the data entered by the user when firing
+
+
+    **Result**: the possibility of introducing non-correct data is excluded
+
+
+    **Status**: bug fixed;
+
+- There was no function that checks the data entered by the user during registration, which made it possible to enter incorrect data
+
+    **Actions**: Added a function that checks the data entered by the user during registration
+
+
+    **Result**: the possibility of introducing non-correct data is excluded
+
+
+    **Status**: bug fixed;
+
 
 ## Deployment
 
