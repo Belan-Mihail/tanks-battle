@@ -250,6 +250,10 @@ def easy_game_level():
                 raise ValueError(
                     "Numbers entered must not be the same"
                 )
+            if ' ' in values[0] or ' ' in values[1]:
+                raise ValueError(
+                    "spaces in values are not allowed"
+                )
         except ValueError as e:
             print(f"Invalid data: {e}, please try again.\n")
             return False
@@ -542,6 +546,10 @@ def medium_game_level():
                ):
                 raise ValueError(
                     "Numbers entered must not be the same"
+                )
+            if ' ' in values[0] or ' ' in values[1] or ' ' in values[2]:
+                raise ValueError(
+                    "spaces in values are not allowed"
                 )
         except ValueError as e:
             print(f"Invalid data: {e}, please try again.\n")
@@ -856,6 +864,15 @@ def hard_game_level():
                ):
                 raise ValueError(
                     "Numbers entered must not be the same"
+                )
+            if (
+                ' ' in values[0] or
+                ' ' in values[1] or
+                ' ' in values[2] or
+                ' ' in values[3]
+            ):
+                raise ValueError(
+                    "spaces in values are not allowed"
                 )
         except ValueError as e:
             print(f"Invalid data: {e}, please try again.\n")
