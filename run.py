@@ -17,7 +17,7 @@ SHEET = GSPREAD_CLIENT.open('tanksbattle')
 logins = SHEET.worksheet('logins')
 passwords = SHEET.worksheet('passwords')
 
-# welcome image
+# tanks image
 print("              ||||||||    ")
 time.sleep(0.4)
 print("            |||||||||||")
@@ -119,6 +119,10 @@ def new_user_registration():
 
 
 def check_registration_data(new_login, new_password):
+    """
+    checks the data entered by the user for compliance
+    with the required ones and "catches" errors
+    """
     try:
         if len(new_login) < 4 or len(new_password) < 4:
             raise ValueError(
@@ -147,11 +151,21 @@ check_user()
 
 def introduction_func():
     """
-    Displays a welcome message to the user with a description of the game,
+    Displays a welcome image and message to the user
+    with a description of the game,
     and also asks for a username
     """
+    # welcome image
+    time.sleep(0.4)
+    print("     ||      || EEEE ||     |||||  ||    ||  || ")
+    time.sleep(0.4)
+    print("      || |  ||  E--  ||    ||     |  |  || \\/ ||")
+    time.sleep(0.4)
+    print("       || ||    EEEE |||||  |||||  ||  ||      || ")
+    time.sleep(0.4)
+
     introduction = """
-    Welcome to the tanks battle game!
+    to the tanks battle game!
     In this game, the one who quickly knocks out all the enemy tanks will win.
     Intrigued? Then let's get started...\n"""
 
