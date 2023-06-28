@@ -102,10 +102,16 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 ## Features
 
 ### Tank Image
+- When the user run the program this area is displayed
+- it consists of the image of the tank which is the symbol of the game
+
+<details><summary>Tank Image</summary>
+<img src="docs/features-images/tank-image.jpg">
+</details>
 
 ### User Signup and Login Area
 
-- When the user run the program this area is displayed
+- After start image
 - it consists of user verification, authorization and new user registration functions
 - The user is also prompted to enter his login
 - User stories covered: 1
@@ -117,8 +123,8 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 
 ### Start game display
 
-- When the user run the program this area is displayed
-- It consists in a small welcome message explaining the essence of the game
+- After the user run the program and sing up
+- It consists in "welcome" image a small welcome message explaining the essence of the game
 - The user is also prompted to enter his name or nickname
 - User stories covered: 2
 
@@ -129,7 +135,7 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 
 ### Difficulty selection
 
-- After the user run the program and entre his name
+- After the user run the program, sign up and welcome message
 - It consists in a small message with instructions for choosing the difficulty of the game
 - The user can select the desired difficulty level by pressing from 1 to 3
 - User stories covered: 3
