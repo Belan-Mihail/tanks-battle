@@ -337,6 +337,9 @@ def easy_game_level():
 
             if validate_user_shot(user_shot):
                 print('Fire!\n')
+                print_user_tank_in_shot1()
+                print_user_tank_in_shot2()
+                print_user_tank_in_shot3()
                 maded_moves.append(user_shot)
                 possible_moves.remove(int(user_shot))
                 time.sleep(2)
@@ -651,6 +654,9 @@ def medium_game_level():
 
             if validate_user_shot(user_shot):
                 print('Fire!\n')
+                print_user_tank_in_shot1()
+                print_user_tank_in_shot2()
+                print_user_tank_in_shot3()
                 maded_moves.append(user_shot)
                 possible_moves.remove(int(user_shot))
                 time.sleep(2)
@@ -978,6 +984,9 @@ def hard_game_level():
 
             if validate_user_shot(user_shot):
                 print('Fire!\n')
+                print_user_tank_in_shot1()
+                print_user_tank_in_shot2()
+                print_user_tank_in_shot3()
                 maded_moves.append(user_shot)
                 possible_moves.remove(int(user_shot))
                 time.sleep(2)
@@ -1236,6 +1245,51 @@ def print_user_tank_in_shot3():
     print("|||||||||||||||||||||||")
     print("|||||||||||||||||||||||")
     print("|||||||||||||||||||||||")
+    time.sleep(1)
+    print()
+    print()
+
+
+def computer_tank_in_shot1():
+    print()
+    print()
+    print("                                                   ||||||||    ")
+    print("                                                  |||||||||||")
+    print("                           |+|       |||||||||||||||||||||||||")
+    print("                                                ||||||||||||||||||")
+    print("                                           |||||||||||||||||||||||")
+    print("                                           |||||||||||||||||||||||")
+    print("                                           |||||||||||||||||||||||")
+    time.sleep(1)
+    print()
+    print()
+
+
+def computer_tank_in_shot2():
+    print()
+    print()
+    print("                                                   ||||||||    ")
+    print("                                                  |||||||||||")
+    print("                 |+|                 |||||||||||||||||||||||||")
+    print("                                                ||||||||||||||||||")
+    print("                                           |||||||||||||||||||||||")
+    print("                                           |||||||||||||||||||||||")
+    print("                                           |||||||||||||||||||||||")
+    time.sleep(1)
+    print()
+    print()
+
+
+def computer_tank_in_shot3():
+    print()
+    print()
+    print("                                                   ||||||||    ")
+    print("                                                  |||||||||||")
+    print("       |+|                           |||||||||||||||||||||||||")
+    print("                                                ||||||||||||||||||")
+    print("                                           |||||||||||||||||||||||")
+    print("                                           |||||||||||||||||||||||")
+    print("                                           |||||||||||||||||||||||")
     time.sleep(1)
     print()
     print()
