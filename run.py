@@ -1196,6 +1196,51 @@ def repeat_game():
         return
 
 
+def print_user_tank_in_shot1():
+    print()
+    print()
+    print("       ||||||||    ")
+    print("     |||||||||||")
+    print("    |||||||||||||||||||||||||     |+| ")
+    print("||||||||||||||||||")
+    print("|||||||||||||||||||||||")
+    print("|||||||||||||||||||||||")
+    print("|||||||||||||||||||||||")
+    time.sleep(1)
+    print()
+    print()
+
+
+def print_user_tank_in_shot2():
+    print()
+    print()
+    print("      ||||||||    ")
+    print("    |||||||||||")
+    print("   |||||||||||||||||||||||||              |+| ")
+    print("||||||||||||||||||")
+    print("|||||||||||||||||||||||")
+    print("|||||||||||||||||||||||")
+    print("|||||||||||||||||||||||")
+    time.sleep(1)
+    print()
+    print()
+
+
+def print_user_tank_in_shot3():
+    print()
+    print()
+    print("       ||||||||    ")
+    print("     |||||||||||")
+    print("    |||||||||||||||||||||||||                        |+| ")
+    print("||||||||||||||||||")
+    print("|||||||||||||||||||||||")
+    print("|||||||||||||||||||||||")
+    print("|||||||||||||||||||||||")
+    time.sleep(1)
+    print()
+    print()
+
+
 def main(pick_user_level_game):
     """
     the main function that launches the game process
