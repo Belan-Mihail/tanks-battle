@@ -103,6 +103,11 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 - GitPod was the IDE used for writing code. 
 - Render was used to deployment project
 
+### 3rd Party Python Libraries used
+
+- Google sheets API was used to store and check the user input and authorize the user identity
+- Google OAuth was used to connect the project with the google account.
+
 ## Features
 
 ### Tank Image

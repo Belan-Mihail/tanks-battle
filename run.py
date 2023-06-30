@@ -394,6 +394,9 @@ def easy_game_level():
         print('Computer turn')
         time.sleep(2)
         print('He shoots straight...')
+        computer_tank_in_shot1()
+        computer_tank_in_shot2()
+        computer_tank_in_shot3()
 
         for value in list_for_computer_move:
             if value in computer_moves:
@@ -711,6 +714,9 @@ def medium_game_level():
         print('Computer turn')
         time.sleep(2)
         print('He shoots straight...')
+        computer_tank_in_shot1()
+        computer_tank_in_shot2()
+        computer_tank_in_shot3()
 
         for value in list_comp_mov_medium:
             if value in computer_moves:
@@ -1041,6 +1047,9 @@ def hard_game_level():
         print('Computer turn')
         time.sleep(2)
         print('He shoots straight...')
+        computer_tank_in_shot1()
+        computer_tank_in_shot2()
+        computer_tank_in_shot3()
 
         for value in list_comp_mov_hard:
             if value in computer_moves:
