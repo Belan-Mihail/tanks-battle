@@ -406,6 +406,16 @@ The website was tested on the following browsers:
 
     **Status**: bug fixed;
 
+- Due to a logical error in the code, it was possible to enter a password belonging to another login and successfully log in
+
+    **Actions**: Change registration function and add get_current_user function to avoid bad password error
+
+
+    **Result**: the possibility of introducing non-correct data is excluded
+
+
+    **Status**: bug fixed;
+
 
 ## Deployment
 
