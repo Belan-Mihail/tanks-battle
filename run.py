@@ -15,7 +15,8 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('tanksbattle')
 
 logins = SHEET.worksheet('logins')
-passwords = SHEET.worksheet('passwords')
+users_data = SHEET.worksheet('users_data')
+
 
 # tanks image
 print("              ||||||||    ")
@@ -32,6 +33,14 @@ print("       |||||||||||||||||||||||")
 time.sleep(0.4)
 print("       |||||||||||||||||||||||")
 time.sleep(0.5)
+
+
+def get_current_users():
+    """
+    function gets current users from google sheets
+    """
+    current_users = users_data.get_all_records()
+    return current_users
 
 
 def check_user():
@@ -68,20 +77,20 @@ def signup():
     print()
     # input login
     login = input("Enter your login\n")
-
-    # google sheets login check
-    if (logins.find(login)) is None:
-        print('Login you entered is missing\n')
-        check_user()
-
     print()
     # input password
     password = input("Enter your password\n")
 
-    # password sheets login check
-    if (passwords.find(password)) is None:
-        print('Password you entered is missing\n')
+    input_user_data = login + "_" + password
+
+    # check availability and user in google sheets
+    if (users_data.find(input_user_data)) is None:
+        print('User is not found\n')
         check_user()
+    else:
+        print("\nAuthorization was successful")
+        print()
+        time.sleep(2)
 
 
 def new_user_registration():
@@ -102,17 +111,18 @@ def new_user_registration():
         registration_data = check_registration_data(new_login, new_password)
 
         if registration_data:
+            new_user = [f"{new_login}_{new_password}"]
+            # add user to google sheets
+            users_data.append_row(new_user)
             # add login to google sheets
             logins.append_row(new_login.split())
-            # add password to google sheets
-            passwords.append_row(new_password.split())
-            # variable converting username to greeting
             new_login_str = ''.join(new_login.split())
             print()
             time.sleep(1)
             print(f'Hi {new_login_str}')
             print("""Your password and login are saved.
             Now you need to use them to login to the game""")
+
             # function call  signup
             signup()
             break
