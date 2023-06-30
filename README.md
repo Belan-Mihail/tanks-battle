@@ -426,13 +426,61 @@ The website was tested on the following browsers:
 
 **The website was deployed using Render:**
 1. Visit [render.com](https://render.com/)
+ - Click on the button Get started for free
+ <details>
+    <summary>Home page render.com</summary>
+    <img src="docs/deployment/first-screenshot.jpg">
+</details>
+
 2. Registration on the site
-3. Installing GitHub repositories
-4. Create new Web Service
-5. Add settings (name, region, build command, start command ...)
-6. Add environment variables
-7. Choose Auto-Deployment
-8. Press "Build & deployment" button
+ - register or log in to the site
+  <details>
+    <summary>Sign in page render.com</summary>
+    <img src="docs/deployment/second-screenshot.jpg">
+</details>
+
+3. Create new Web Service
+ - Click on the button New
+ - Choose Web Service
+ <details>
+    <summary>Dashboard</summary>
+    <img src="docs/deployment/third-screenshot.jpg">
+</details>
+
+4. Installing GitHub repositories
+ - Select + Connect account for GitHub
+ <details>
+    <summary>Connect account GitHub</summary>
+    <img src="docs/deployment/fourth-screenshot.jpg">
+</details>
+
+5. Select  the desired repository 
+ - Select  the desired repository and click Connect 
+ <details>
+    <summary>Connect account GitHub</summary>
+    <img src="docs/deployment/fifth-screenshot.jpg">
+</details>
+
+6. Add settings (name, region, build command, start command)
+ <details>
+    <summary>Settings</summary>
+    <img src="docs/deployment/sixth-screenshot.jpg">
+    <img src="docs/deployment/seventh-screenshot.jpg">
+</details>
+
+7. Add environment variables
+ <details>
+    <summary>Environment variables</summary>
+    <img src="docs/deployment/eighth-screenshot.jpg">
+    <img src="docs/deployment/ninth-screenshot.jpg">
+</details>
+
+7. Choose Auto-Deployment and click Create Website
+ <details>
+    <summary>Create Website</summary>
+    <img src="docs/deployment/tenth-screenshot.jpg">
+</details>
+
 
 [Live webpage](https://tanks-battle.onrender.com/)
 
