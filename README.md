@@ -22,6 +22,7 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Frameworks & Tools](#frameworks-&-tools)
+    3. [3rd Party Python Libraries used](#3rd-party-python-libraries-used)
 5. [Features](#features)
     1. [Tank Image](#tank-image)
     2. [User Signup and Login Area](#user-signup-and-login-area)
