@@ -414,8 +414,6 @@ def easy_game_level():
         """
         a function that checks if the user is in the tank
         """
-        print('Checking if you hit the tank\n')
-        time.sleep(2)
         index = len(shot) - 1
         if shot[index] in list_for_check_user_hit_the_target:
             print('Exactly! You knocked out an enemy tank\n')
@@ -429,8 +427,6 @@ def easy_game_level():
         """
         a function that checks if the computer got into the user's tank
         """
-        print('Checking if the computer hit the target\n')
-        time.sleep(2)
         index = len(shot) - 1
         if shot[index] in list_check_computer_hit_target:
             print('Damn! He knocked out your tank\n')
@@ -738,8 +734,6 @@ def medium_game_level():
         """
         a function that checks if the user is in the tank
         """
-        print('Checking if you hit the tank\n')
-        time.sleep(2)
         index = len(shot) - 1
         if shot[index] in list_user_hit_target_medium:
             print('Exactly! You knocked out an enemy tank\n')
@@ -753,8 +747,6 @@ def medium_game_level():
         """
         a function that checks if the computer got into the user's tank
         """
-        print('Checking if the computer hit the target\n')
-        time.sleep(2)
         index = len(shot) - 1
         if shot[index] in list_comp_hit_target_medium:
             print('Damn! He knocked out your tank\n')
@@ -1075,8 +1067,6 @@ def hard_game_level():
         """
         a function that checks if the user is in the tank
         """
-        print('Checking if you hit the tank\n')
-        time.sleep(2)
         index = len(shot) - 1
         if shot[index] in list_user_hit_target_hard:
             print('Exactly! You knocked out an enemy tank\n')
@@ -1090,8 +1080,6 @@ def hard_game_level():
         """
         a function that checks if the computer got into the user's tank
         """
-        print('Checking if the computer hit the target\n')
-        time.sleep(2)
         index = len(shot) - 1
         if shot[index] in list_comp_hit_target_hard:
             print('Damn! He knocked out your tank\n')
