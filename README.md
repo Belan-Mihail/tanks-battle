@@ -112,7 +112,7 @@ A simple logic game similar to a sea battle. In this game, the player will have 
 
 ### Tank Image
 - When the user run the program this area is displayed
-- it consists of the image of the tank which is the symbol of the game
+- it consists of the image of the tanks which is the symbol of the game
 
 <details><summary>Tank Image</summary>
 <img src="docs/features-images/tank-image.jpg">

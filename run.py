@@ -492,6 +492,7 @@ def easy_game_level():
                 check_user_hit_the_target(user_maded_moves, computer_tanks)
                 if len(computer_tanks) == 0:
                     print('Fantastic! You won!!!!')
+                    computer_is_lose()
                     game = False
                     break
                 computer_move(shuffle_computer_move)
@@ -500,6 +501,7 @@ def easy_game_level():
                     )
                 if len(user_tanks_choice) == 0:
                     print('Alas .. This time you lost ...')
+                    user_is_lose()
                     game = False
                     break
         else:
@@ -510,12 +512,14 @@ def easy_game_level():
                     )
                 if len(user_tanks_choice) == 0:
                     print('Alas .. This time you lost ...')
+                    user_is_lose()
                     game = False
                     break
                 user_move(user_maded_moves, user_possible_moves)
                 check_user_hit_the_target(user_maded_moves, computer_tanks)
                 if len(computer_tanks) == 0:
                     print('Fantastic! You won!!!!')
+                    computer_is_lose()
                     game = False
                     break
         print()
@@ -813,6 +817,7 @@ def medium_game_level():
                 check_user_hit_the_target(user_maded_moves, computer_tanks)
                 if len(computer_tanks) == 0:
                     print('Fantastic! You won!!!!')
+                    computer_is_lose()
                     game = False
                     break
                 computer_move(shuffle_computer_move)
@@ -821,6 +826,7 @@ def medium_game_level():
                     )
                 if len(user_tanks_choice) == 0:
                     print('Alas .. This time you lost ...')
+                    user_is_lose()
                     game = False
                     break
         else:
@@ -831,12 +837,14 @@ def medium_game_level():
                     )
                 if len(user_tanks_choice) == 0:
                     print('Alas .. This time you lost ...')
+                    user_is_lose()
                     game = False
                     break
                 user_move(user_maded_moves, user_possible_moves)
                 check_user_hit_the_target(user_maded_moves, computer_tanks)
                 if len(computer_tanks) == 0:
                     print('Fantastic! You won!!!!')
+                    computer_is_lose()
                     game = False
                     break
         print()
@@ -1148,6 +1156,7 @@ def hard_game_level():
                 check_user_hit_the_target(user_maded_moves, computer_tanks)
                 if len(computer_tanks) == 0:
                     print('Fantastic! You won!!!!')
+                    computer_is_lose()
                     game = False
                     break
                 computer_move(shuffle_computer_move)
@@ -1156,6 +1165,7 @@ def hard_game_level():
                     )
                 if len(user_tanks_choice) == 0:
                     print('Alas .. This time you lost ...')
+                    user_is_lose()
                     game = False
                     break
         else:
@@ -1166,12 +1176,14 @@ def hard_game_level():
                     )
                 if len(user_tanks_choice) == 0:
                     print('Alas .. This time you lost ...')
+                    user_is_lose()
                     game = False
                     break
                 user_move(user_maded_moves, user_possible_moves)
                 check_user_hit_the_target(user_maded_moves, computer_tanks)
                 if len(computer_tanks) == 0:
                     print('Fantastic! You won!!!!')
+                    computer_is_lose()
                     game = False
                     break
         print()
@@ -1215,6 +1227,9 @@ def repeat_game():
 
 
 def print_user_tank_in_shot1():
+    """
+    a function that graphically shows the shot of user tank
+    """
     print()
     print()
     print("       ||||||||    ")
@@ -1230,6 +1245,9 @@ def print_user_tank_in_shot1():
 
 
 def print_user_tank_in_shot2():
+    """
+    a function that graphically shows the shot of user tank
+    """
     print()
     print()
     print("      ||||||||    ")
@@ -1245,6 +1263,9 @@ def print_user_tank_in_shot2():
 
 
 def print_user_tank_in_shot3():
+    """
+    a function that graphically shows the shot of user tank
+    """
     print()
     print()
     print("       ||||||||    ")
@@ -1260,6 +1281,9 @@ def print_user_tank_in_shot3():
 
 
 def computer_tank_in_shot1():
+    """
+    a function that graphically shows the shot of computer tank
+    """
     print()
     print()
     print("                                                   ||||||||    ")
@@ -1275,6 +1299,9 @@ def computer_tank_in_shot1():
 
 
 def computer_tank_in_shot2():
+    """
+    a function that graphically shows the shot of computer tank
+    """
     print()
     print()
     print("                                                   ||||||||    ")
@@ -1290,6 +1317,9 @@ def computer_tank_in_shot2():
 
 
 def computer_tank_in_shot3():
+    """
+    a function that graphically shows the shot of computer tank
+    """
     print()
     print()
     print("                                                   ||||||||    ")
@@ -1300,6 +1330,36 @@ def computer_tank_in_shot3():
     print("                                           |||||||||||||||||||||||")
     print("                                           |||||||||||||||||||||||")
     time.sleep(1)
+    print()
+    print()
+
+
+def computer_is_lose():
+    """
+    a function that graphically displays a wrecked computer tank
+    """
+    print()
+    print()
+    print("                                           |||||||||*||||||||")
+    print("   ||||||||||||||*|||||||||           |||||||*|||||||||||*|||")
+    print("               |||||||||||            ||*|||||||||*||||||||||")
+    print("                 ||||*|||             ||||||||||||||||||*||||")
+    time.sleep(3)
+    print()
+    print()
+
+
+def user_is_lose():
+    """
+    a function that graphically displays a wrecked user tank
+    """
+    print()
+    print()
+    print("|||||||||*||||||||")
+    print("|||*|||||||||||||||||||              |||||||||||||||||||||||||")
+    print("||||||||||||||*||||||||               ||||*|||||| ")
+    print("||||*||||||||||||||*|||                 |||||||| ")
+    time.sleep(3)
     print()
     print()
 
